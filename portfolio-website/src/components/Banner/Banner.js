@@ -151,6 +151,10 @@ const Banner = () => {
             <Button target="_blank" href="https://www.linkedin.com/in/raj-chhatbar1729/" style={{color: "#F5F5F7",  width: "50px", height: "50px",  marginTop: 10,marginLeft: 10}}>
                 <img className={classes.linkedInIcon} src={linkedinRound}/>
             </Button>
+
+            <Button target="_blank" href="https://www.linkedin.com/in/raj-chhatbar1729/" style={{color: "#F5F5F7",  width: "50px", height: "50px",  marginTop: 10,marginLeft: 10}}>
+                <Typography>Download Resume</Typography>
+            </Button>
                 
             </div>
 

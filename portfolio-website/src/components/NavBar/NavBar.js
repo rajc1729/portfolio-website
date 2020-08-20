@@ -1,187 +1,116 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 
 import {
-  AppBar, Toolbar, Typography, List, ListItem,
-  withStyles, Grid, SwipeableDrawer, Button, Avatar, Tabs, Tab
+  Tabs,Tab, 
 } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-
-import { NavLink } from "react-router-dom";
 
 
+const styles = makeStyles(theme => ({
+
+  navContainer: {
+     position: 'fixed',
+     top: 0,
+     display: 'flex',
+     height: '30px',
+     width:'100%',
+     justifyContent: 'center',
+     zIndex: 1,
+     transitionTimingFunction: 'ease-in',
+     transition: 'all 0.5s'
+
+  },
+
+  navContaineFilledr: {
+    position: 'fixed',
+    top: 0,
+    display: 'flex',
+    height: '47px',
+    width:'100%',
+    backgroundColor: '#444444',
+    zIndex: 1,
+    justifyContent: 'center',
+
+ },
+
+}));
 
 
 
-const styles = theme => ({
+const AntTabs = withStyles({
+  root: {
+    // borderBottom: '1px solid #e8e8e8',
+  },
+  indicator: {
+    backgroundColor: '#FFFFFF',
+  },
+})(Tabs);
 
-    navbarCointainer: {
-        
-
-        // border: '2px solid red',
-        maxWidth: '100%',
-        flex:1,
-        justify:"space-between"
+const AntTab = withStyles((theme) => ({
+  root: {
+    textTransform: 'none',
+    minWidth: 150,
+    fontWeight: theme.typography.fontWeightRegular,
+    marginRight: theme.spacing(4),
+    color: '#F8F8F8',
+    fontWeight: 300,
+    fontFamily: [
+      'Questrial',
+    ].join(','),
+    '&:hover': {
+      color: '#FFFFFF',
+      opacity: 1,
     },
-
-    projectProposal: {
-        fontFamily: 'Inter',
-        fontStyle: 'normal',
-        fontWeight: 500,
-        fontSize: '16px',
-        color: '#161637',
-        marginLeft: 25,
-        marginTop: 9
-      
+    '&$selected': {
+      color: '#FFFFFF',
+      fontWeight: theme.typography.fontWeightMedium,
     },
-    
-    navbarCointainerItem: {
-        width: '800px'
+    '&:focus': {
+      color: '#FFFFFF',
     },
-
-
-    label: {
-      // color: '#FFF000'
-      color: 'black'
-    },
-    indicator: {
-    backgroundColor: '#18292D'
-    }
-    
-});
-
-class NavBar extends Component{
-  constructor(props){
-    super(props);
-    this.state = {drawerActivate:false, drawer:false, value: 1};
-    this.createDrawer = this.createDrawer.bind(this);
-    this.destroyDrawer = this.destroyDrawer.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-
-
-  }
-
-  componentWillMount(){
-    if(window.innerWidth <= 900){
-      this.setState({drawerActivate:true});
-    }
+  },
+  selected: {},
+}))((props) => <Tab disableRipple {...props} />);
 
 
 
-    window.addEventListener('resize',()=>{
-      if(window.innerWidth <= 900){
-        this.setState({drawerActivate:true});
+const NavBar = () => {
+
+  const [show, handleShow] = useState(false);  
+
+  useEffect( ()=>{
+    window.addEventListener('scroll', ()=>{
+      if (window.scrollY> 100){
+        handleShow(true)
       }
-      else{
-        this.setState({drawerActivate:false})
-      }
-
+      else handleShow(false)
     });
-  }
-
-
-
-    handleChange = (event, newValue) => {
-    console.log("here -> ", newValue)
-      this.setState({value:newValue});
+    return ()=> {
+      window.removeEventListener("scroll")
     }
+  }, [])
 
-  //Small Screens
-  createDrawer(){
-    return (
-      <div>
-        <AppBar >
-          <Toolbar>
-            <Grid container direction = "row" justify = "space-between" alignItems="center">
-              <MenuIcon
-                className = {this.props.classes.sideBarIcon}
-                onClick={()=>{this.setState({drawer:true})}} />
+  const [value, setValue] = React.useState(0);
 
-              <Typography color="inherit" variant = "h1">Title</Typography>
-              <Typography color="inherit" variant = "h1"></Typography>
-            </Grid>
-          </Toolbar>
-        </AppBar>
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
-        <SwipeableDrawer
-         open={this.state.drawer}
-         onClose={()=>{this.setState({drawer:false})}}
-         onOpen={()=>{this.setState({drawer:true})}}>
-
-           <div
-             tabIndex={0}
-             role="button"
-             onClick={()=>{this.setState({drawer:false})}}
-             onKeyDown={()=>{this.setState({drawer:false})}}>
-
-            <List className = {this.props.classes.list}>
-               <ListItem key = {1} button divider> Option 1 </ListItem>
-               <ListItem key = {2} button divider> Option 2 </ListItem>
-               <ListItem key = {3} button divider> Option 3 </ListItem>
-             </List>
-
-         </div>
-       </SwipeableDrawer>
-
-      </div>
-    );
-  }
-
-  //Larger Screens
-  destroyDrawer(){
-    const {classes} = this.props
-    return (
-        
-      <AppBar style={{backgroundColor: '#FFFFFF', boxShadow: '0px 0px 34px rgba(33, 33, 86, 0.06)' , alignItems: 'center', }}>
-        
-      <Toolbar >
-
-        <Grid container justify="space-between" className={classes.navbarCointainer}>
-        
-        <Grid item className={classes.navbarCointainerItem}>
-
-            <Tabs
-                value={this.state.value}
-                // indicatorColor="black"
-                textColor="primary"
-                onChange={this.handleChange}
-                classes={{ indicator: classes.indicator }}
-            >
-                {/* <Tab label={<span style={{ color: 'white' }}>About</span>} />
-                <Tab label={<span style={{ color: 'white' }}>Skills</span>}  />
-                <Tab label= {<span style={{ color: 'white' }}>Education</span>}  />
-                <Tab label= {<span style={{ color: 'white' }}>Experience</span>}  />
-                <Tab label= {<span style={{ color: 'white' }}>Projects</span>}  /> */}
-
-                <Tab classes={{ label: classes.label }} label= "About" /> 
-                <Tab classes={{ label: classes.label }}  label= "Skills" /> 
-                <Tab classes={{ label: classes.label }} label= "Education" /> 
-                <Tab classes={{ label: classes.label }}  label= "Experience" /> 
-                <Tab classes={{ label: classes.label }}  label= "Projects" /> 
-                
-            </Tabs>
-            
-            </Grid>
+  const classes = styles();
 
 
-        </Grid>
-      
-      </Toolbar>
-
-      </AppBar>
-      
-    )
-  }
-
-  render(){
-    return(
-      <div>
-        {this.state.drawerActivate ? this.createDrawer() : this.destroyDrawer()}
-      </div>
-    );
-  }
+  return ( 
+    <div className={ show ? classes.navContaineFilledr : classes.navContainer  }>
+      <AntTabs value={value} onChange={handleChange} aria-label="ant example">
+          <AntTab label="About me" />
+          <AntTab label="Skills" />
+          <AntTab label="Education" />
+          <AntTab label="Experience" />
+          <AntTab label="Projects" />
+        </AntTabs>
+    
+    </div>
+   );
 }
-
-
-
-
-export default withStyles(styles)(NavBar);
+ 
+export default NavBar;

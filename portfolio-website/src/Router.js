@@ -19,12 +19,12 @@ const Router = () =>
 					<Route component={Home} exact path='/home'/> */}
 
 
-					<Route exact path="/">
+					{/* <Route exact path="/">
         				<Redirect to="/home"/>
-      				</Route>
+      				</Route> */}
 
 					<Route component={NavBar} exact path='/NavBar'/>
-					<Route component={Home} exact path='/home'/>
+					<Route component={Home} exact path='/'/>
 					<Route component={Banner} exact path='/Banner'/>
 
 
