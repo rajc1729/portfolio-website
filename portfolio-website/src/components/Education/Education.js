@@ -37,7 +37,7 @@ const styles = makeStyles(theme => ({
     timelineContainer: {
         marginLeft: 0,
         paddingLeft: 0,
-        width: 500,
+        width: 1200,
         padding: '0px',
 		'&:last-child': {
 			padding: '0px'
@@ -45,8 +45,8 @@ const styles = makeStyles(theme => ({
     },
 
     paper: {
-        width: 300,
-    },
+        padding: '6px 16px',
+      },
 
 }));
 
@@ -62,93 +62,49 @@ const Education = () => {
 
         <div className={classes.timelineContainer}>
 
-        <Timeline >
+        <Timeline align="alternate">
       <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
-            2017
-          </Typography>
-        </TimelineOppositeContent>
-
         <TimelineSeparator>
-          <TimelineDot>
-            {/* <FastfoodIcon /> */}
-          </TimelineDot>
+          <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        
-        
         <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
+        <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" component="h1">
-              St. Xavier's college, Ahmedabad
+              2019 - 2021
             </Typography>
-            <Typography>Because you need strength</Typography>
+            <Typography>Master of Science: Computer Science</Typography>
+            <Typography>California State University. Fullerton</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
-
       <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
-            2018
-          </Typography>
-        </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot >
-            {/* <LaptopMacIcon /> */}
-          </TimelineDot>
+          <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        
         <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
+        <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" component="h1">
-            Master of Science (prerequisites): Computer Science 
+              2018 - 2019
             </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
+            <Typography>Master of Science (prerequisites): Computer Science </Typography>
+            <Typography>California State University. Fullerton</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
-      <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
-            2019
-          </Typography>
-        </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot >
-            {/* <HotelIcon /> */}
-          </TimelineDot>
-          <TimelineConnector className={classes.secondaryTail} />
+          <TimelineDot />
+          <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
+        <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" component="h1">
-            Master of Science: Computer Science 
+              2014 - 2018
             </Typography>
-            <Typography>Because you need rest</Typography>
-          </Paper>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-      <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
-            Exp May-2021
-          </Typography>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot >
-            {/* <RepeatIcon /> */}
-          </TimelineDot>
-        </TimelineSeparator>
-
-        <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
-            <Typography variant="h6" component="h1">
-              Repeat
-            </Typography>
-            <Typography>Because this is the life you love!</Typography>
+            <Typography>Bachelor of Science: Physics and Computer Science </Typography>
+            <Typography>St. Xavier's College, Ahmedabad and GLS University, Ahmedabad </Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
