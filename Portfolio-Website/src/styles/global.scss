@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root{
-    
+    --light: #FFFFFF;
+    --dark: #091133;
+    --primary: #FF6584;
+    --accent: #fee348;
 }
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    margin: 0;
+    font-family: "Roboto", Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .accent {
+    color: var(--primary);
+  }
+  
+  h2 {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 18px;
+  }
