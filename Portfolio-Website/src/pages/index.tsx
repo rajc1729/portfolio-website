@@ -1,15 +1,19 @@
 import React from "react"
+import About from "../components/About"
+import Contact from "../components/Contact"
+import Landing from "../components/Landing"
 import Layout from "../components/layout"
+import Work from "../components/Work"
 import "../styles/index.scss"
 
 
 const IndexPage = () => (
   <>
   <Layout>
-    <section id="landing">Hero section</section>
-    <section id="about">About section</section>
-    <section id="work">Work section</section>
-    <section id="contact">contact section</section>
+    <Landing/>
+    <About/>
+    <Work/>
+    <Contact/>
   </Layout>
   </>
 )
