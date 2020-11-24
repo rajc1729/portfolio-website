@@ -6,6 +6,8 @@
     --primary: #FF6584;
     --accent: #fee348;
     --nav: #FBFBFD;
+    --text: #929ECC;
+    --darkText: #37447E;
 }
 
 body {
@@ -15,6 +17,9 @@ body {
     font-family: "Roboto", Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: url('../images/Path.svg') no-repeat;
+    background-position: 550px 10px;
+    background-size: 1660px 900px;
   }
   
   .accent {
@@ -24,6 +29,16 @@ body {
   h2 {
     font-size: 48px;
     font-weight: bold;
+  }
+
+  h1{
+    font-size: 96px;
+    font-weight: 500;
+  }
+
+  h4{
+    font-size: 30px;
+    font-weight: 500;
   }
   
   p {

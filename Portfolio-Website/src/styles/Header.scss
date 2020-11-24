@@ -24,7 +24,7 @@
         font-size: 26px;
     }
     a:visited {
-    color: var(--dark);
+    color: var(--darkText);
     }
 }
 
@@ -40,7 +40,7 @@
     li > a {
         text-decoration: none;
         position: relative;
-        color: var(--dark);
+        color: var(--darkText);
         font-weight: 500;
     }
 }

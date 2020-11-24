@@ -2,5 +2,79 @@
     position: relative;
     width: 100%;
     height: 80vh;
-    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-around;
+}
+
+.intro_container{
+    display: flex;
+    flex-direction: column;
+    padding: 90px 50px;
+    width: 50%;
+
+    span{
+        color: var(--dark);
+        font-size: 36px;
+        font-weight: normal;
+    }
+
+    h1{
+        margin: 10px 0px;
+    }
+
+    p{
+        width: 420px;
+        color: var(--text);
+    }
+}
+
+.imageContainer{
+    
+    width: 50%;
+    margin: 0px;
+}
+
+.avatar_img{
+    // position: absolute;
+    border-radius: 50%;
+    width: 439px;
+    height: 439px;
+    object-fit: cover;
+    margin-top: 65px;
+    display: block;
+    margin: 10vh auto;
+    
+}
+
+@mixin button-reset {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button_container{
+    width: 50vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dark_button{
+    @include button-reset;
+    background: #111B47;
+    color: white;
+    width: 206px;
+    height: 33px;
+    font-size: 16px;
+}
+
+.light_button{
+    @include button-reset;
+    border: 2px solid #091133;
+    box-sizing: border-box;
+    width: 206px;
+    height: 33px;
+    font-size: 16px;
 }
