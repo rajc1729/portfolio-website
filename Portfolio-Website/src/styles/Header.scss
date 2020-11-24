@@ -6,6 +6,9 @@
     height: 55px;
     top: 0px;
     width: 100%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.05),
+    0 2px 8px rgba(0, 0, 0, 0.05);
+
 }
 
 .navbar_elm{
@@ -24,7 +27,7 @@
         font-size: 26px;
     }
     a:visited {
-    color: var(--darkText);
+    color: var(--lightDarkText);
     }
 }
 
@@ -40,7 +43,7 @@
     li > a {
         text-decoration: none;
         position: relative;
-        color: var(--darkText);
+        color: var(--lightDarkText);
         font-weight: 500;
     }
 }

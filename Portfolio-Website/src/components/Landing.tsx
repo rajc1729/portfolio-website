@@ -14,7 +14,7 @@ const Landing = () => {
                         I am a software engineer based on southern california, specializing in building full-stack cloud-based solutions.
                     </p>
 
-                    <div className="button_container">
+                    {/* <div className="button_container">
                         <button className="dark_button">
                             Resume
                         </button>
@@ -22,7 +22,7 @@ const Landing = () => {
                         <button className="light_button">
                             Get in Touch
                         </button>
-                    </div>
+                    </div> */}
                 </div>
 
 
