@@ -1,6 +1,126 @@
+@mixin button-reset {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 #work{
     position: relative;
     width: 100%;
-    height: 200px;
-    // background-color: darkgoldenrod;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
 }
+
+.work_container{
+    position: relative;
+    max-width: 750px;
+    // border: 2px solid red;
+}
+
+.title{
+    color: var(--darkText);
+}
+
+.tab_container{
+    padding-top: 33px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.work_list{
+    display: block;
+    z-index: 3;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.work_name_button{
+    @include button-reset();
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    height: 30px;
+    padding: 0 20px 2px;
+    border-right: 2px solid #C8C8C8;
+    text-align: center;
+    white-space: nowrap;
+    outline:none;
+    &:hover,
+    &:focus {
+        background-color: #F3F6FF !important;
+    }
+}
+
+.work_name_button_highlight{
+    @include button-reset();
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #F3F6FF;
+    height: 30px;
+    padding: 0 20px 2px;
+    border-right: 2px solid #505F98;
+    text-align: center;
+    white-space: nowrap;
+    outline:none;
+    transition: transform 0.25s ease-in-out;
+    &:hover,
+    &:focus {
+        background-color: #F3F6FF !important;
+    }
+}
+
+.work_tab_container{
+    position: relative;
+    width: 90%;
+    margin-left: 20px;
+    background: #FFFFFF;
+    border: 1px solid #F2F2F2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    height: auto;
+    padding: 20px;
+}
+
+
+.experience_title{
+    margin: 5px 0px;
+    font-weight: 600;
+    color: --var(--darkText);
+}
+
+.company{
+    margin: 0px;
+    font-size: 18px;
+}
+
+.experience_description{
+    color: var(--lightDarkText);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li{
+        position: relative;
+        padding-left: 30px;
+        padding-bottom: 10px;
+    }
+
+    li:before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: #505F98;
+    }
+}
+
