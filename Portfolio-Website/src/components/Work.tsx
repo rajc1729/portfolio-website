@@ -123,9 +123,9 @@ const Work = () => {
 
                             { currentExperience==="techmicra" &&(
                             <div>
-                                <h4 className="experience_title">Full-stack Software Developer Intern</h4>
-                                <h4 className="company">CollabCafe</h4>
-                                <h5>July 2020 - Present</h5>
+                                <h4 className="experience_title">Software Developer Intern</h4>
+                                <h4 className="company">Techmicra IT solutions</h4>
+                                <h5>January 2018 - June 2018</h5>
 
                                 <ul className="experience_description">
                                     <li>
