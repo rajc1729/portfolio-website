@@ -8,7 +8,7 @@ const Work = () => {
     
     return (
         <>
-            <section id="work">
+            <section id="experience">
                 <div className="work_container">
                     <h3 className="title">My Experience</h3>
                     <div className="tab_container">
