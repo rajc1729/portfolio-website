@@ -5,6 +5,7 @@ import PropTypes from "prop-types"
 import "../styles/Layout.scss"
 
 import Header from "./header"
+import Footer from "./Footer"
 
 const Layout = ({ children }) => {
 
@@ -12,6 +13,7 @@ const Layout = ({ children }) => {
     <>
       <Header />
       <main className="main_container">{children}</main>
+      <Footer/>
     </>
   )
 }

@@ -23,7 +23,7 @@ export const ProjectCardLeft = ({title, technologies_text, code_link, descriptio
                 </a>
             </div>
 
-            <div className="project_desctiption_container">
+            <div className="project_description_container">
             <ul className="project_description">
             <li>{description}</li>
             </ul>
@@ -56,7 +56,7 @@ export const ProjectCardRight = ({title, technologies_text, code_link, descripti
 
             </div>
 
-            <div className="project_desctiption_container">
+            <div className="project_description_container">
             <ul className="project_description">
                 <li>{description}</li>
             </ul>

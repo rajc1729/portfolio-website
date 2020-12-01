@@ -1,0 +1,35 @@
+#footer{
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #E7ECFF;
+    p {
+      margin: 0;
+      line-height: 1.6em;
+      display: inline;
+    }
+    small {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span{
+        display: inline;
+      }
+    }
+}
+.link{
+    color: var(--lightDarkText);
+}
+
+.credit{
+    margin: 10px 0px;
+    display: inline;
+    a {
+        color: var(--lightDarkText);
+    }
+    
+    
+}
+
