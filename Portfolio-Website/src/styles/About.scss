@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     // background-color: lemonchiffon;
+    height: auto;
 }
 
 .title{
@@ -15,7 +16,7 @@
     border-radius: 4px;
     width: auto;
     height: auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .card_title_container{
@@ -30,6 +31,7 @@
     color: var(--lightDarkText);
     font-size: 16px;
     line-height: 26px;
+    overflow: auto;
 }
 
 .second_card{
@@ -38,7 +40,7 @@
     border-radius: 4px;
     width: auto;
     height: auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .language_container{
@@ -87,12 +89,15 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 340px;
+    width: auto;
     padding: 5px;
 }
 
 .university_container{
     padding: 15px 5px;
+    @include media("<=tablet") {
+       padding: 15px 0px;
+    }
 }
 
 .university_card{
@@ -113,6 +118,7 @@
 
 .grid_container{
     width: 100%;
+    padding: 5px;
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: auto;
