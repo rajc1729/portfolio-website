@@ -11,6 +11,8 @@ const Project = () => {
             <div>
                 <h3 className="title">Projects I’ve have worked on</h3>
                 <div className="projectsContainer">
+
+                    
                 <ProjectCardLeft
                 title="IMDB movie review data's sentiment analysis"
                 technologies_text="Python, XGBoost, RNN"

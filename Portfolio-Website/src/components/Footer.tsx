@@ -13,9 +13,9 @@ const Footer = () => {
             </p>
             <small>
                 <span className="credit">Thanks&nbsp;
-                <a href="https://brianchung.co/">@Brain Chung</a> 
+                <a href="https://brianchung.co/" className="link">@Brain Chung</a> 
                 &nbsp;and&nbsp;
-                <a href="https://brittanychiang.com/">@Brittany Chiang</a> for Inspiring me!
+                <a href="https://brittanychiang.com/" className="link">@Brittany Chiang</a> for Inspiring me!
                 </span>
                 
 

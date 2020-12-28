@@ -1,28 +1,35 @@
 import React from "react"
 import "../styles/Landing.scss"
 import raj from "../images/Raj_Chhatbar.png";
+import Data from "../assets/data"
+// import Resume from "../../public/static"
 
 const Landing = () => {
     return (
         <>
             <section id="landing">
+                
                 <div className="intro_container">
                     <span >👋 Hello!  my name is</span>
-                    <h1>Raj Chhatbar</h1>
-                    <h4>Full-stack Software Engineer</h4>
+                    <h1>{Data.name}</h1>
+                    <h4>{Data.title}</h4>
                     <p>
-                        I am a software engineer based on southern california, specializing in building full-stack cloud-based solutions.
+                        {Data.heroDescription}
                     </p>
 
-                    {/* <div className="button_container">
-                        <button className="dark_button">
+                    <div className="button_container">
+                        <a 
+                        href={"/static/raj_resume.pdf"}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        className="dark_button">
                             Resume
-                        </button>
+                        </a>
 
-                        <button className="light_button">
-                            Get in Touch
-                        </button>
-                    </div> */}
+                        {/* <button className="light_button">
+                            Resume
+                        </button> */}
+                    </div>
                 </div>
 
 

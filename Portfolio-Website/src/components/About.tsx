@@ -3,8 +3,28 @@ import "../styles/About.scss"
 import gls from "../images/gls.png"
 import csuf from "../images/csuf.png"
 import xaviers from "../images/xaviers.png"
+import Data from "../assets/data"
+import ProficiencyRating from "./card/ProficiencyRating"
 
 const About = () => {
+
+
+    const languageProficiency = (percentage: number): string => {
+        if (percentage >= 85) {
+            return 'Proficient';
+        } else if (percentage >= 70) {
+            return 'Advanced';
+        }
+        else if (percentage >= 65) {
+        return 'Upper Intermediate';
+        }
+        else if (percentage >= 55) {
+            return 'Intermediate';
+        }
+        else {
+            return 'Elementary';
+        }
+    }
     return (
         <>
         <section id="about">
@@ -14,7 +34,7 @@ const About = () => {
                 <div id="introduction"  className="first_card">
                     <div className="card_title_container">
                     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0)">
+                        <g clipPath="url(#clip0)">
                         <path d="M7 6.51672C3.3106 6.51672 0.30896 9.30399 0.30896 12.7298C0.30896 12.8789 0.439299 13 0.599884 13H13.4001C13.5607 13 13.6911 12.8789 13.6911 12.7298C13.6911 9.30396 10.6894 6.51672 7 6.51672Z" fill="#091133"/>
                         <path d="M6.99998 5.94296C8.76732 5.94296 10.2 4.61258 10.2 2.97148C10.2 1.33038 8.76732 0 6.99998 0C5.23264 0 3.79993 1.33038 3.79993 2.97148C3.79993 4.61258 5.23264 5.94296 6.99998 5.94296Z" fill="#091133"/>
                         </g>
@@ -30,10 +50,10 @@ const About = () => {
 
                     <div>
                     <p className="description">
-                        Hello! I'm Raj, a software engineer based in Los Angles, CA. Currently a master student studying Computer Science at California State University, Fullerton.
+                        {Data.introductionPara1}
                     </p>
                     <p className="description">
-                        Success doesn't become a reality through only dreams; it takes persistence, dedication, and hard work. I enjoy creating innovative apps that improve quality of life and productivity. When I am is away from a computer, I enjoy hiking and eating out!
+                         {Data.introductionPara2}
                     </p>
                     </div>
 
@@ -41,6 +61,7 @@ const About = () => {
 
                 <div id="languages"  className="second_card">
                     <div className="card_title_container">
+                        
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.4 16.6L4.8 12L9.4 7.4L8 6L2 12L8 18L9.4 16.6ZM14.6 16.6L19.2 12L14.6 7.4L16 6L22 12L16 18L14.6 16.6Z" fill="#091133"/>
                         </svg>
@@ -49,209 +70,70 @@ const About = () => {
                     </div>
 
                     <div className="language_container">
-                        <div className="language">
-                            <div >
-                                <span className="language_name">Python</span>
-                                <p className="language_confidence_level">Proficient</p>
-                            </div>
 
-                            <div>
-                                <svg width="86" height="25" viewBox="0 0 86 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="75.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                    <ellipse cx="75.375" cy="12.625" rx="5.375" ry="5.625" fill="#F0F0F0"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 25H86V0H0V25ZM84.8831 23.387H1.11692V1.61285H84.8831V23.387Z" fill="#3F3D56"/>
-                                    <ellipse cx="10.1528" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                    <ellipse cx="23.2916" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                    <ellipse cx="36.4305" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                    <ellipse cx="49.5695" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                    <ellipse cx="62.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                    <path d="M75.375 18.25C73.9495 18.25 72.5823 17.6574 71.5743 16.6025C70.5663 15.5476 70 14.1168 70 12.625C70 11.1332 70.5663 9.70242 71.5743 8.64752C72.5823 7.59263 73.9495 7 75.375 7V12.625V18.25Z" fill="#FF6584"/>
-                                </svg>
-                            </div>
+                        {Object.keys(Data.language).map((key) => {
+                            const language = Data.language[key]
 
-                        </div>
-
-
-                        <div className="language">
-                            <div >
-                                <span className="language_name">JavaScript(ES6)</span>
-                                <p className="language_confidence_level">Proficient</p>
-                            </div>
-
-                            <div>
-                            <svg width="86" height="25" viewBox="0 0 86 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="75.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                <ellipse cx="75.375" cy="12.625" rx="5.375" ry="5.625" fill="#F0F0F0"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 25H86V0H0V25ZM84.8831 23.387H1.11692V1.61285H84.8831V23.387Z" fill="#3F3D56"/>
-                                <ellipse cx="10.1528" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                <ellipse cx="23.2916" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                <ellipse cx="36.4305" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                <ellipse cx="49.5695" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                <ellipse cx="62.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            </svg>
-                            </div>
-
-                        </div>
-
-
-                        <div className="language">
-                            <div >
-                                <span className="language_name">TypeScript</span>
-                                <p className="language_confidence_level">Proficient</p>
-                            </div>
-
-                            <div>
-                            <svg width="86" height="25" viewBox="0 0 86 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="75.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                <ellipse cx="75.375" cy="12.625" rx="5.375" ry="5.625" fill="#F0F0F0"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 25H86V0H0V25ZM84.8831 23.387H1.11692V1.61285H84.8831V23.387Z" fill="#3F3D56"/>
-                                <ellipse cx="10.1528" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                <ellipse cx="23.2916" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                <ellipse cx="36.4305" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                <ellipse cx="49.5695" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                                <ellipse cx="62.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            </svg>
-                            </div>
-
-                        </div>
-
-
-                        <div className="language">
-                            <div >
-                                <span className="language_name">SQL</span>
-                                <p className="language_confidence_level">Advance</p>
-                            </div>
-
-                            <div>
-                            <svg width="86" height="25" viewBox="0 0 86 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <ellipse cx="75.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="75.375" cy="12.625" rx="5.375" ry="5.625" fill="#F0F0F0"/>
-                            <ellipse cx="62.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="62.375" cy="12.625" rx="5.375" ry="5.625" fill="#F0F0F0"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 25H86V0H0V25ZM84.8831 23.387H1.11692V1.61285H84.8831V23.387Z" fill="#3F3D56"/>
-                            <ellipse cx="10.1528" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="23.2916" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="36.4305" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="49.5695" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <path d="M62.375 18.25C60.9495 18.25 59.5823 17.6574 58.5743 16.6025C57.5663 15.5476 57 14.1168 57 12.625C57 11.1332 57.5663 9.70242 58.5743 8.64752C59.5823 7.59263 60.9495 7 62.375 7L62.375 12.625L62.375 18.25Z" fill="#FF6584"/>
-                            </svg>
-
-                            </div>
-
-                        </div>
-
-
-                        <div className="language">
-                            <div >
-                                <span className="language_name">C/C++</span>
-                                <p className="language_confidence_level">Upper Intermediate</p>
-                            </div>
-
-                            <div>
-                            <svg width="86" height="25" viewBox="0 0 86 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <ellipse cx="75.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="75.375" cy="12.625" rx="5.375" ry="5.625" fill="#F0F0F0"/>
-                            <ellipse cx="62.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="62.375" cy="12.625" rx="5.375" ry="5.625" fill="#F0F0F0"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 25H86V0H0V25ZM84.8831 23.387H1.11692V1.61285H84.8831V23.387Z" fill="#3F3D56"/>
-                            <ellipse cx="10.1528" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="23.2916" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="36.4305" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="49.5695" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            </svg>
-
-                            </div>
-
-                        </div>
-
-
-                        <div className="language">
-                            <div >
-                                <span className="language_name">GO</span>
-                                <p className="language_confidence_level">Intermediate</p>
-                            </div>
-
-                            <div>
-                            <svg width="86" height="25" viewBox="0 0 86 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <ellipse cx="75.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="75.375" cy="12.625" rx="5.375" ry="5.625" fill="#F0F0F0"/>
-                            <ellipse cx="62.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="62.375" cy="12.625" rx="5.375" ry="5.625" fill="#F0F0F0"/>
-                            <ellipse cx="49.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="49.375" cy="12.625" rx="5.375" ry="5.625" fill="#F0F0F0"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 25H86V0H0V25ZM84.8831 23.387H1.11692V1.61285H84.8831V23.387Z" fill="#3F3D56"/>
-                            <ellipse cx="10.1528" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="23.2916" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="36.4305" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <path d="M49.375 18.25C48.6691 18.25 47.9702 18.1045 47.3181 17.8218C46.666 17.5391 46.0734 17.1248 45.5743 16.6025C45.0752 16.0801 44.6793 15.46 44.4091 14.7776C44.139 14.0951 44 13.3637 44 12.625C44 11.8863 44.139 11.1549 44.4091 10.4724C44.6793 9.78995 45.0752 9.16985 45.5743 8.64752C46.0734 8.12519 46.666 7.71086 47.3181 7.42818C47.9702 7.14549 48.6691 7 49.375 7L49.375 12.625L49.375 18.25Z" fill="#FF6584"/>
-                            </svg>
-
-                            </div>
-
-                        </div>
-
-                        <div className="language">
-                            <div >
-                                <span className="language_name">JAVA</span>
-                                <p className="language_confidence_level">Intermediate</p>
-                            </div>
-
-                            <div>
-                            <svg width="86" height="25" viewBox="0 0 86 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <ellipse cx="75.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="75.375" cy="12.625" rx="5.375" ry="5.625" fill="#F0F0F0"/>
-                            <ellipse cx="62.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="62.375" cy="12.625" rx="5.375" ry="5.625" fill="#F0F0F0"/>
-                            <ellipse cx="49.375" cy="12.625" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="49.375" cy="12.625" rx="5.375" ry="5.625" fill="#F0F0F0"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 25H86V0H0V25ZM84.8831 23.387H1.11692V1.61285H84.8831V23.387Z" fill="#3F3D56"/>
-                            <ellipse cx="10.1528" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="23.2916" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <ellipse cx="36.4305" cy="11.875" rx="5.375" ry="5.625" fill="#FF6584"/>
-                            <path d="M49.375 18.25C48.6691 18.25 47.9702 18.1045 47.3181 17.8218C46.666 17.5391 46.0734 17.1248 45.5743 16.6025C45.0752 16.0801 44.6793 15.46 44.4091 14.7776C44.139 14.0951 44 13.3637 44 12.625C44 11.8863 44.139 11.1549 44.4091 10.4724C44.6793 9.78995 45.0752 9.16985 45.5743 8.64752C46.0734 8.12519 46.666 7.71086 47.3181 7.42818C47.9702 7.14549 48.6691 7 49.375 7L49.375 12.625L49.375 18.25Z" fill="#FF6584"/>
-                            </svg>
-
-                            </div>
-
-                        </div>
+                            return (
+                                <div className="language" key={key}>
+                                    <div>
+                                        <span className="language_name">{language.name}</span>
+                                        <p className="language_confidence_level">{languageProficiency(language.rating)}</p>
+                                    </div>
+                                    <div>
+                                        <ProficiencyRating percentage = {language.rating}/>
+                                    </div>
+                                </div>
+                            )
+                        
+                        })}
+                        
                     </div>
                 </div>
 
                 <div id="technologies" className="first_card">
                     <div className="card_title_container">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0)">
-                    <path d="M17 12.645V10.356C15.83 9.939 15.093 9.823 14.72 8.925C14.347 8.025 14.79 7.413 15.32 6.3L13.702 4.681C12.597 5.206 11.979 5.655 11.076 5.281C10.176 4.907 10.059 4.164 9.645 3H7.355C6.943 4.158 6.825 4.907 5.924 5.28H5.923C5.023 5.654 4.413 5.21 3.298 4.68L1.681 6.299C2.208 7.409 2.654 8.023 2.281 8.924C1.906 9.825 1.158 9.943 0 10.355V12.644C1.155 13.056 1.907 13.175 2.28 14.075C2.656 14.983 2.199 15.609 1.68 16.7L3.298 18.319C4.405 17.794 5.022 17.345 5.923 17.719H5.924C6.824 18.092 6.942 18.837 7.355 19.999H9.644C10.056 18.841 10.174 18.094 11.081 17.717H11.082C11.976 17.345 12.583 17.788 13.701 18.319L15.319 16.7C14.794 15.593 14.345 14.977 14.718 14.075C15.092 13.176 15.844 13.056 17 12.645ZM8.5 14.334C6.936 14.334 5.667 13.065 5.667 11.5C5.667 9.935 6.936 8.666 8.5 8.666C10.064 8.666 11.333 9.935 11.333 11.5C11.333 13.065 10.064 14.334 8.5 14.334ZM24 18.539V17.462C23.45 17.266 23.103 17.211 22.927 16.789C22.751 16.365 22.96 16.078 23.209 15.553L22.447 14.791C21.927 15.039 21.636 15.249 21.212 15.074C20.788 14.899 20.733 14.549 20.538 14.001H19.462C19.268 14.546 19.212 14.898 18.788 15.074C18.364 15.25 18.077 15.041 17.553 14.791L16.791 15.553C17.039 16.076 17.249 16.365 17.073 16.789C16.897 17.213 16.545 17.268 16 17.462V18.539C16.544 18.732 16.897 18.789 17.073 19.212C17.25 19.639 17.035 19.934 16.791 20.448L17.553 21.21C18.074 20.962 18.365 20.752 18.788 20.927C19.212 21.102 19.267 21.453 19.462 22H20.538C20.732 21.455 20.788 21.103 21.214 20.926H21.215C21.636 20.751 21.921 20.96 22.447 21.21L23.209 20.448C22.962 19.927 22.751 19.636 22.927 19.213C23.103 18.79 23.456 18.732 24 18.539ZM20 19.333C19.264 19.333 18.667 18.736 18.667 18C18.667 17.264 19.264 16.667 20 16.667C20.736 16.667 21.333 17.264 21.333 18C21.333 18.736 20.736 19.333 20 19.333Z" fill="#091133"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0">
-                    <rect width="24" height="24" fill="white"/>
-                    </clipPath>
-                    </defs>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.9 11.3C18 10.8 18 10.4 18 10C18 9.6 18 9.2 17.9 8.7L19.8 7L17.5 3L15.1 3.8C14.4 3.3 13.7 2.8 12.9 2.5L12.3 0H7.70001L7.20001 2.5C6.30001 2.8 5.60001 3.3 4.90001 3.8L2.50001 3L0.200012 7L2.10001 8.7C2.00001 9.2 2.00001 9.6 2.00001 10C2.00001 10.4 2.00001 10.8 2.10001 11.3L0.200012 13L2.50001 17L4.90001 16.2C5.60001 16.7 6.30001 17.2 7.10001 17.5L7.70001 20H12.4L12.9 17.5C13.7 17.2 14.5 16.8 15.1 16.2L17.5 17L19.8 13L17.9 11.3ZM10 14C7.80001 14 6.00001 12.2 6.00001 10C6.00001 7.8 7.80001 6 10 6C12.2 6 14 7.8 14 10C14 12.2 12.2 14 10 14Z" fill="#091133"/>
                     </svg>
-
 
 
                     <span>&nbsp;&nbsp;Technologies</span>
                     </div>
 
-                    <div>
+                    <div className="technologies_container">
                         <span>Frameworks</span>
                         <div className="technologies_text_container">
-                            <span className="technologies_text">React</span>
-                            <span className="technologies_text">Django</span>
+                            {Object.keys(Data.technologies.Frameworks).map((key) => {
+                                const framework = Data.technologies.Frameworks[key]
+                                return (
+                                <span className="technologies_text" key = {key}>{framework.name}</span>
+                                )
+                            })} 
                         </div>
+                    </div>
 
+                    <div className="technologies_container">
+                    <span>Databases</span>
+                        <div className="technologies_text_container">
+                            {Object.keys(Data.technologies.Databases).map((key) => {
+                                const framework = Data.technologies.Databases[key]
+                                return (
+                                <span className="technologies_text" key = {key}>{framework.name}</span>
+                                )
+                            })} 
+                        </div>
+                    </div>
+
+                    <div className="technologies_container">
                         <span>Tools</span>
                         <div className="technologies_text_container">
-                            <span className="technologies_text">React</span>
-                            <span className="technologies_text">Django</span>
-                        </div>
-
-                        <span>Cloud</span>
-                        <div className="technologies_text_container">
-                            <span className="technologies_text">React</span>
-                            <span className="technologies_text">Django</span>
+                            {Object.keys(Data.technologies.Tools).map((key) => {
+                                const framework = Data.technologies.Tools[key]
+                                return (
+                                <span className="technologies_text" key = {key}>{framework.name}</span>
+                                )
+                            })} 
                         </div>
                     </div>
 
@@ -259,16 +141,12 @@ const About = () => {
 
                 <div id="education" className="first_card">
                     <div className="card_title_container">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0)">
-                    <path d="M20 12.875V17.943C20 20.697 14.211 22 11 22C7.948 22 2 20.608 2 17.943V11.649L11 16.512L20 12.875ZM11.917 2L-1 7.75L11 14.25L22 9.833V17H24V8.75L11.917 2ZM25 22H21C21.578 21 22 19.5 22 18H24C24 19.516 24.391 20.859 25 22Z" fill="#091133"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0">
-                    <rect width="24" height="24" fill="white"/>
-                    </clipPath>
-                    </defs>
+                    <svg width="23" height="15" viewBox="0 0 23 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.9545 4.52813L23 4.15078L11.5 0L0 4.15081L11.5 8.30155L20.3864 5.09415V7.58054C20.2242 7.71219 20.125 7.88432 20.125 8.07305C20.125 8.48501 20.594 8.82016 21.1705 8.82016C21.7469 8.82016 22.2159 8.48501 22.2159 8.07305C22.2159 7.88429 22.1167 7.71219 21.9546 7.58054V4.52813H21.9545Z" fill="black"/>
+                    <path d="M11.5 9.55706L4.18176 6.91565V12.3689C4.18176 13.813 7.45823 14.9837 11.4999 14.9837C15.5417 14.9837 18.8181 13.813 18.8181 12.3689V6.91565L11.5 9.55706Z" fill="black"/>
                     </svg>
+
+
 
 
                     <span>&nbsp;&nbsp;Education</span>
@@ -283,9 +161,9 @@ const About = () => {
                                 <img src={csuf} ></img>
                                 </div>
                                 <div className="university_card">
-                                    <span className="university_name">California State University, Fullerton</span>
-                                    <p className="language_confidence_level">Masters of Science - Computer Science</p>
-                                    <p className="language_confidence_level">August 2018 - Expected May 2021</p>
+                                    <span className="university_name">{Data.education.id1.institution}</span>
+                                    <p className="language_confidence_level">{Data.education.id1.degree}</p>
+                                    <p className="language_confidence_level">{Data.education.id1.date}</p>
                                 </div>
                             </div>
 
@@ -294,9 +172,9 @@ const About = () => {
                                 <img src={gls} ></img>
                                 </div>
                                 <div className="university_card">
-                                    <span className="university_name">California State University, Fullerton</span>
-                                    <p className="language_confidence_level">Post Graduate Diploma - Computer Science</p>
-                                    <p className="language_confidence_level">March 2017 - March 2018</p>
+                                    <span className="university_name">{Data.education.id2.institution}</span>
+                                    <p className="language_confidence_level">{Data.education.id2.degree}</p>
+                                    <p className="language_confidence_level">{Data.education.id2.date}</p>
                                 </div>
                             </div>
 
@@ -305,9 +183,9 @@ const About = () => {
                                 <img src={xaviers} ></img>
                                 </div>
                                 <div className="university_card">
-                                    <span className="university_name">St. Xavier's College, Ahmedabad</span>
-                                    <p className="language_confidence_level">Bachlors of Science - Physics</p>
-                                    <p className="language_confidence_level">June 2014 - March 2017</p>
+                                    <span className="university_name">{Data.education.id3.institution}</span>
+                                    <p className="language_confidence_level">{Data.education.id3.degree}</p>
+                                    <p className="language_confidence_level">{Data.education.id3.date}</p>
                                 </div>
                             </div>
                             
@@ -318,16 +196,15 @@ const About = () => {
 
                 <div id="intrest" className="second_card">
                     <div className="card_title_container">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0)">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.865 17.097C8.57601 17.902 5.69301 16.562 5.11001 14.341C2.23201 14.336 0.0240071 12.933 7.08098e-06 10.455C-0.0379929 6.42401 4.51601 1.00701 12 1.00001C19.485 0.993007 23.996 6.31201 24 11.329C24.004 16.346 19.818 18.226 16.393 17.592C16.029 19.099 16.222 21.17 16.625 22.339L14.516 23C13.703 20.212 12.316 18.033 10.865 17.097ZM10.173 7.82101C9.48201 7.50701 9.00001 6.80901 9.00001 6.00001C9.00001 4.89601 9.89601 4.00001 11 4.00001C12.104 4.00001 13 4.89601 13 6.00001C13 6.26001 12.95 6.50901 12.86 6.73801C14.074 7.64901 15.265 8.59301 16.459 9.53201C16.884 9.19901 17.419 9.00001 18 9.00001C19.38 9.00001 20.5 10.12 20.5 11.5C20.5 12.88 19.38 14 18 14C16.829 14 15.845 13.193 15.574 12.105C14.373 12.203 13.17 12.278 11.968 12.359C11.799 13.292 10.981 14 10 14C8.89601 14 8.00001 13.104 8.00001 12C8.00001 10.967 8.78501 10.116 9.79001 10.011C9.91101 9.28001 10.042 8.55101 10.173 7.82101ZM12.233 7.57501C11.936 7.80701 11.572 7.95801 11.175 7.99201L10.812 10.172C11.316 10.396 11.71 10.823 11.892 11.349L15.539 11.06C15.586 10.793 15.676 10.541 15.801 10.311L12.233 7.57501Z" fill="black"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0">
-                    <rect width="24" height="24" fill="white"/>
-                    </clipPath>
-                    </defs>
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.8577 12.0517L11.8116 12.0325C11.7907 12.0822 11.7801 12.135 11.7801 12.1887V16.4906C11.7801 16.7161 11.9631 16.8991 12.1886 16.8991C12.4141 16.8991 12.5971 16.7161 12.5971 16.4906V13.1748L18.3526 18.9303C18.4322 19.01 18.5369 19.05 18.6414 19.05C18.7459 19.05 18.8506 19.01 18.9302 18.9303C19.0899 18.7706 19.0899 18.5124 18.9302 18.3527L13.1747 12.5972H16.4905C16.7163 12.5972 16.8989 12.4142 16.8989 12.1887C16.8989 11.9632 16.7163 11.7802 16.4905 11.7802H12.1886C12.1351 11.7802 12.082 11.7913 12.0327 11.8115L12.0327 11.8115L12.0325 11.8116C11.9327 11.8529 11.8531 11.9326 11.8115 12.0325L11.8577 12.0517ZM11.8577 12.0517C11.8394 12.0955 11.8301 12.1417 11.8301 12.1887V16.4906C11.8301 16.6885 11.9907 16.8491 12.1886 16.8491C12.3865 16.8491 12.5471 16.6885 12.5471 16.4906V13.1248L16.4905 12.5472C16.6887 12.5472 16.8489 12.3866 16.8489 12.1887C16.8489 11.9908 16.6887 11.8302 16.4905 11.8302H12.1886C12.142 11.8302 12.0954 11.8399 12.0516 11.8578C11.9642 11.894 11.8942 11.9639 11.8577 12.0517Z" fill="#091133" stroke="black" strokeWidth="0.1"/>
+                    <path d="M6.96671 7.18796L6.96687 7.18789L7.1417 6.94775L7.18783 6.96704C7.18784 6.96701 7.18785 6.96699 7.18785 6.96697C7.20866 6.91718 7.2193 6.86405 7.2193 6.81081V2.50892C7.2193 2.28342 7.03631 2.10043 6.81081 2.10043C6.58531 2.10043 6.40232 2.28342 6.40232 2.50892V5.8247L0.647144 0.0695279C0.487448 -0.0901682 0.229224 -0.0901682 0.0695279 0.0695279C-0.0901678 0.229224 -0.0901682 0.487447 0.0695268 0.647143C0.0695272 0.647144 0.0695275 0.647144 0.0695279 0.647144L5.82435 6.40232H2.50892C2.28342 6.40232 2.10043 6.58531 2.10043 6.81081C2.10043 7.03631 2.28342 7.2193 2.50892 7.2193H6.81081C6.86431 7.2193 6.91734 7.2082 6.96671 7.18796Z" fill="#091133" stroke="black" strokeWidth="0.1"/>
+                    <path d="M6.96757 11.8116L6.96757 11.8116L6.96731 11.8115C6.91794 11.7913 6.86491 11.7802 6.81141 11.7802H2.50952C2.28402 11.7802 2.10103 11.9632 2.10103 12.1887C2.10103 12.4142 2.28402 12.5972 2.50952 12.5972H5.8253L0.069772 18.3527C-0.089924 18.5124 -0.089924 18.7706 0.069772 18.9303C0.149409 19.01 0.254056 19.05 0.35858 19.05C0.463104 19.05 0.567751 19.01 0.647388 18.9303L6.40292 13.1748V16.4906C6.40292 16.7161 6.58591 16.8991 6.81141 16.8991C7.03691 16.8991 7.2199 16.7161 7.2199 16.4906V12.1887C7.2199 12.1352 7.2088 12.0822 7.18856 12.0328L7.18846 12.0325C7.14682 11.9325 7.06759 11.8533 6.96757 11.8116Z" fill="#091133" stroke="black" strokeWidth="0.1"/>
+                    <path d="M12.0324 7.18846L12.0327 7.18856C12.082 7.2088 12.1351 7.2199 12.1886 7.2199H16.4905C16.7163 7.2199 16.8989 7.03688 16.8989 6.81141C16.8989 6.58594 16.7163 6.40292 16.4905 6.40292H13.1747L18.9302 0.647388C19.0899 0.487692 19.0899 0.229468 18.9302 0.069772C18.7705 -0.089924 18.5123 -0.089924 18.3526 0.069772L12.5971 5.8253V2.50952C12.5971 2.28402 12.4141 2.10103 12.1886 2.10103C11.9631 2.10103 11.7801 2.28402 11.7801 2.50952V6.81141C11.7801 6.86491 11.7912 6.91794 11.8114 6.96731L11.8114 6.96732L11.8115 6.96757C11.8532 7.06759 11.9324 7.14682 12.0324 7.18846Z" fill="#091133" stroke="black" strokeWidth="0.1"/>
+                    <path d="M9.49996 6.76128C7.98963 6.76128 6.76128 7.98963 6.76128 9.49996C6.76128 11.0103 7.98963 12.2386 9.49996 12.2386C11.0103 12.2386 12.2386 11.0103 12.2386 9.49996C12.2386 7.98963 11.0103 6.76128 9.49996 6.76128ZM9.49996 11.4217C8.44027 11.4217 7.57826 10.5596 7.57826 9.49996C7.57826 8.44027 8.44027 7.57826 9.49996 7.57826C10.5596 7.57826 11.4217 8.44027 11.4217 9.49996C11.4217 10.5596 10.5596 11.4217 9.49996 11.4217Z" fill="#091133" stroke="black" strokeWidth="0.1"/>
                     </svg>
+
+
 
 
                     <span>&nbsp;&nbsp;My Interests</span>
@@ -337,7 +214,11 @@ const About = () => {
                     <div className="intrest_container">
                         <span className="university_name">Can’t live without</span>
                         <ul>
-                            <li>Youtube</li>
+                            {Data.myIntrest.CantLiveWithout.items.map((item, i) => {
+                                return (
+                                <li key={i}>{item}</li>
+                                )
+                            } )}
                         </ul>
                     </div>
 

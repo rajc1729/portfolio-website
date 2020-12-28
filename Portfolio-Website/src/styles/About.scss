@@ -27,6 +27,15 @@
 }
 
 
+.technologies_container{
+    margin-top: 25px;
+}
+
+.technologies_container > span {
+    font-size: 16px;
+}
+
+
 .description{
     color: var(--lightDarkText);
     font-size: 16px;
@@ -105,12 +114,16 @@
 }
 
 .intrest_container{
+    margin-top: 20px;
 
     ul{
+        margin: 0px;
+        padding: 5px;
         text-decoration: dashed;
         font-size: 16px;
         li{
-            font-size: 12px;
+            margin-left: 25px;
+            font-size: 14px;
             color: #5D6970;
         }
     }
@@ -135,6 +148,7 @@
           "education intrest";
       }
       @include media(">phone", "<=tablet") {
+        padding: 2px;
         grid-template-columns: 1fr;
         grid-template-areas:
           "introduction"
@@ -144,6 +158,7 @@
           "intrest";
       }
       @include media("<=phone") {
+        padding: 2px;
         grid-template-columns: 1fr;
         grid-template-areas:
         "introduction"

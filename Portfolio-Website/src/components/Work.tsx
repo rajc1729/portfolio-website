@@ -4,7 +4,17 @@ import "../styles/Work.scss"
 
 const Work = () => {
 
-    const [currentExperience, setCurrentExperience] = useState<string>("finary");
+    const [windowWidth, setWindowWidth] = useState(null)
+    const [currentExperience, setCurrentExperience] = useState<string>("csuf");
+
+    const updateWindowSize = () => {
+        setWindowWidth(window.innerWidth)
+    }
+
+    useEffect(() => {
+        window.addEventListener("resize", updateWindowSize)
+        updateWindowSize()
+      }, [])
     
     return (
         <>
@@ -12,15 +22,29 @@ const Work = () => {
                 <div className="work_container">
                     <h3 className="title">My Experience</h3>
                     <div className="tab_container">
-                        <div className="work_list">
+
+
+
+                    {windowWidth < 768 &&  (<div className="work_list_flex">
                             <div>
-                                <button 
-                                onClick={() => setCurrentExperience("finary")}
-                                className={currentExperience==="finary" ? "work_name_button_highlight" : "work_name_button"}
+                                <button
+                                onClick={() => setCurrentExperience("csuf")}
+                                className={currentExperience==="csuf" ? "work_flex_name_button_highlight" : "work_flex_name_button"}
                                 >
-                                    Finary.io
+                                    CSUF
                                 </button>
                             </div>
+                            <div>
+                                <button
+                                onClick={() => setCurrentExperience("techmicra")}
+                                className={currentExperience==="techmicra" ? "work_flex_name_button_highlight" : "work_flex_name_button"}
+                                >
+                                    Techmicra
+                                </button>
+                            </div>
+                        </div>)}
+
+                        {windowWidth > 768 &&  (<div className="work_list">
                             <div>
                                 <button
                                 onClick={() => setCurrentExperience("csuf")}
@@ -37,41 +61,12 @@ const Work = () => {
                                     Techmicra
                                 </button>
                             </div>
-                        </div>
+                        </div>)}
+
+
+
 
                         <div className="work_tab_container">
-
-                            
-
-                            { currentExperience==="finary" &&(
-                            <div>
-                                <h4 className="experience_title">Software Developer Intern</h4>
-                                <h4 className="company">Finary.io</h4>
-                                <h5>May 2020 - July 2020</h5>
-
-                                <ul className="experience_description">
-                                    <li>
-                                    Collaborated with MIT and Harvard students to develop an MVP for a fintech startup, currently in the testing phase
-                                    </li>
-
-                                    <li>
-                                    Designed and implemented a minimum viable product backed system within 3 weeks to get user feedbacks
-                                    </li>
-
-                                    <li>
-                                    Developed REST API using express.js and deployed it over Firebase cloud function to reduce operation cost by 30%
-                                    </li>
-
-                                    <li>
-                                    Configured Alpaca API to use real-time paper trading function and provide stocks portfolio for users
-                                    </li>
-
-                                    <li>
-                                    Followed Agile Scrum methodology using Gitlab boards by performing code review
-                                    </li>
-                                </ul>
-                            </div>)}
-
                             { currentExperience==="csuf" &&(
                             <div>
                                 <h4 className="experience_title">Graduate Research Assistant</h4>

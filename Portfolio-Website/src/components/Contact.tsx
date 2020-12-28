@@ -1,5 +1,6 @@
 import React from "react"
 import "../styles/Contact.scss"
+import Data from "../assets/data"
 
 const Contact = () => {
     return (
@@ -10,9 +11,11 @@ const Contact = () => {
                 
                 <p className="contact_description">I'm currently looking for new opportunities, related to Full-stack software engineering </p>
 
-                <button className="say_hello_button">
+                <a 
+                href={`mailto:${Data.email}`}
+                className="say_hello_button">
                     Say Hello!
-                </button>
+                </a>
                 </div>
             </section>
         </>
