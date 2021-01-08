@@ -8,11 +8,13 @@ import Layout from "../components/layout"
 import Project from "../components/Projects"
 import Work from "../components/Work"
 import "../styles/index.scss"
+import SEO from "../components/seo"
 
 
 const IndexPage = ({data}) => (
   <>
   <Layout>
+    <SEO title="Software Engineer" />
     <Landing pic={data.landingPic}/>
     <About/>
     <Work/>
