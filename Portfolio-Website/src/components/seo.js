@@ -2,7 +2,7 @@
  * SEO component that queries for data with
  *  Gatsby's useStaticQuery React hook
  *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
+ * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
 import React from "react"
@@ -19,6 +19,10 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            siteUrl
+            keywords
+            siteLang
+            image
           }
         }
       }
@@ -26,7 +30,6 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
 
   return (
     <Helmet
@@ -34,11 +37,15 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={`${site.siteMetadata.title} | %s`}
       meta={[
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `keywords`,
+          content: site.siteMetadata.keywords,
         },
         {
           property: `og:title`,
@@ -53,12 +60,48 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+        {
+          property: `og:site_name`,
+          content: site.siteMetadata.title,
+        },
+        {
+          property: `og:image`,
+          content: `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
+        },
+        {
+          property: `og:image:width`,
+          content: `1200`,
+        },
+        {
+          property: `og:image:height`,
+          content: `630`,
+        },
+        {
+          property: `og:image:type`,
+          content: `image/png`,
+        },
+        {
+          property: `og:locale`,
+          content: site.siteMetadata.siteLang,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
+        },
+        {
+          name: `twitter:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+        {
+          name: `twitter:site`,
+          content: site.siteMetadata.author,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: site.siteMetadata.author,
         },
         {
           name: `twitter:title`,
@@ -68,7 +111,51 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `twitter:image`,
+          content: `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
+        },
+        {
+          name: `twitter:image:alt`,
+          content: site.siteMetadata.title,
+        },
+        {
+          name: `msapplication-TileColor`,
+          content: `#2b5797`,
+        },
+        {
+          name: `theme-color`,
+          content: `#ffffff`,
+        },
       ].concat(meta)}
+      link={[
+        {
+          rel: `stylesheet`,
+          href: `https://fonts.googleapis.com/css2?family=Roboto&display=swap`,
+        },
+        {
+          rel: `apple-touch-icon`,
+          sizes: `180x180`,
+          href: `/static/apple-touch-icon.png`,
+        },
+        {
+          rel: `icon`,
+          type: `image/png`,
+          sizes: `32x32`,
+          href: `/static/favicon-32x32.png`,
+        },
+        {
+          rel: `icon`,
+          type: `image/png`,
+          sizes: `16x16`,
+          href: `/static/favicon-16x16.png`,
+        },
+        {
+          rel: `mask-icon`,
+          color: `#5bbad5`,
+          href: `/static/safari-pinned-tab.svg`,
+        },
+      ]}
     />
   )
 }

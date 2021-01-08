@@ -2,7 +2,11 @@ module.exports = {
   siteMetadata: {
     title: `Raj Chhatbar`,
     description: `I am a software engineer based in LA!`,
+    siteUrl: `https://rajchhatbar.com`,
+    image: '/images/Raj_Chhatbar.png',
     author: `@raj`,
+    keywords: `Raj Chhatbar, Raj, Chhatbar, rajchhatbar, software engineer, full-stack engineer, software developer, javascript, python`,
+    siteLang: `en_US`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -38,6 +42,12 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-186949274-1`,
+      },
+    },
   ],
 }
