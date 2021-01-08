@@ -13,17 +13,17 @@ const  Data= {
                 "link": "https://github.com/rajc1729",
             },
 
-            "id3": {
+            "id2": {
                 "name": "linkedin",
                 "link": "https://www.linkedin.com/in/raj-chhatbar1729/",
             },
 
-            "id4": {
+            "id3": {
                 "name": "stackoverflow",
                 "link": "https://stackoverflow.com/users/11543330/rajc1729",
             },
 
-            "id5": {
+            "id4": {
                 "name": "medium",
                 "link": "https://medium.com/",
             },
