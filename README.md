@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://rajchhatbar.com">
-    <img alt="Raj Chhatbar" src="https://github.com/rajc1729/portfolio-website" width="60" />
+    <img alt="Raj Chhatbar" src="https://user-images.githubusercontent.com/33519807/104060974-96227f00-51ac-11eb-9bfe-e2400beb31ff.png" width="60" />
   </a>
 </div>
 <h1 align="center">
