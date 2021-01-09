@@ -5,7 +5,7 @@ const  Data= {
         "heroDescription": "I am a software engineer based on southern california, specializing in building full-stack cloud-based solutions.",
 
         "introductionPara1": "Hello! I'm Raj, a software engineer based in Los Angles, CA. Currently a master student studying Computer Science at California State University, Fullerton.",
-        "introductionPara2": "There are no secrets to success. It's the result of preparation, hard work, and learning from failure. I enjoy creating, innovating, and testing new Ideas some work and others doesn't; however, I consider experience as the true wisdom",
+        "introductionPara2": "There are no secrets to success. It's the result of preparation, hard work, and learning from failure. I enjoy creating, innovating, and testing new ideas; eventually, some have worked out. However, for me, the experience is the true wisdom",
 
         "social": {
             "id1": {
