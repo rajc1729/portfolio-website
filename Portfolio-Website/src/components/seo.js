@@ -69,7 +69,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
+          content: `${site.siteMetadata.image}`,
         },
         {
           property: `og:image:width`,
@@ -113,7 +113,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
+          content: `${site.siteMetadata.image}`,
         },
         {
           name: `twitter:image:alt`,
