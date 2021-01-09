@@ -9,10 +9,11 @@ const Landing = ({pic}) => {
     return (
         <>
             <section id="landing">
+                <div className="landing_container">
                 
                 <div className="intro_container">
                     <span >👋 Hello!  my name is</span>
-                    <h1>{Data.name}</h1>
+                    <h1>{Data.name}.</h1>
                     <h4>{Data.title}</h4>
                     <p>
                         {Data.heroDescription}
@@ -39,6 +40,7 @@ const Landing = ({pic}) => {
 
                 <div className="imageContainer">
                     <Img fluid={pic.childImageSharp.fluid} alt="Avatar" className="avatar_img"></Img>
+                </div>
                 </div>
             </section>
         </>

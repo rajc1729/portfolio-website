@@ -1,15 +1,10 @@
 .main_container {
-    max-width: 1440px;
-    padding: 0 10%;
-    // margin: 55px auto 0px auto;
-    margin: 5% 5%;
+    margin: 0 auto;
+    max-width: 1245px;
+    padding: 0 50px 1.45rem;
     overflow-x: hidden;
-    @include media(">phone","<=tablet") {
-      padding: 0 3%;
-      margin: 6% 0.0%;
-    }
-    @include media("<=phone") {
-      padding: 0 0.5%;
-      margin: 2% 2%;
+
+    @include media("<tablet") {
+      padding: 0 24px 1.45rem;
     }
   }
