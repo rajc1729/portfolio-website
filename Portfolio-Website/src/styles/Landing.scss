@@ -22,9 +22,6 @@
         justify-content: center;
         height: auto;
     }
-    @include media("<=tablet") {
-        margin-top: 40px;
-    }
 }
 
 .intro_container{
@@ -62,19 +59,19 @@
             font-size: 60px;
         }
         @include media(">tablet", "<=desktop") {
-            font-size: 74px;
+            font-size: 70px;
             margin: 15px 0px;
           }
           @include media(">phone", "<=tablet") {
-            font-size: 45px;
+            font-size: 60px;
             margin: 4px 0px;
           }
-        //   @media (min-width: 320px) and (max-width: 405px) {
-        //     font-size: 35px;
-        //     margin: 4px 0px;
-        // }
+          @media (min-width: 320px) and (max-width: 405px) {
+            font-size: 45px;
+            margin: 4px 0px;
+        }
           @include media("<=phone") {
-            font-size: 30px;
+            font-size: 35px;
             margin: 0px 0px;
           }
     }

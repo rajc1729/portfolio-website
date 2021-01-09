@@ -10,18 +10,15 @@
 #experience{
     position: relative;
     width: 100%;
-    height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    
 }
 
 .work_container{
     position: relative;
     max-width: 750px;
-    // border: 2px solid red;
 }
 
 .title{
@@ -35,6 +32,8 @@
     position: relative;
     @include media("<=tablet") {
         flex-direction: column;
+        padding-top: 13px;
+        align-items: center;
      }
 }
 .work_list_flex{
@@ -135,6 +134,9 @@
     border-radius: 4px;
     height: auto;
     padding: 20px;
+    @include media("<=tablet") {
+        margin-left: 0px;
+    }
 }
 
 
