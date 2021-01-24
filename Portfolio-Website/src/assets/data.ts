@@ -25,7 +25,7 @@ const  Data= {
 
             "id4": {
                 "name": "medium",
-                "link": "https://medium.com/",
+                "link": "https://rajc1729.medium.com/",
             },
         },
 
@@ -211,7 +211,7 @@ const  Data= {
             "id1": {
                 "title": "IMDB movie review data's sentiment analysis",
                 "technologies": "Python, XGBoost, RNN",
-                "link": "https://github.com/rac1729",
+                "link": "https://github.com/rajc1729/Sentimental-analysis-project",
                 "description": "Devised a sentiment analysis model to find out movie review sentiment by utilizing \
                 XGBoost & deep learning RNN's on Amazon sage maker and deployed it over AWS"
             },
@@ -219,7 +219,7 @@ const  Data= {
             "id2": {
                 "title": "Virtual memory manager in operating system",
                 "technologies": "C++, Singleton design, OOP, Page replacement algorithm",
-                "link": "https://github.com/rac1729",
+                "link": "https://github.com/rajc1729/Opersting-System-virtual-manager",
                 "description": " Implemented a virtual memory management system, included support for paging, Virtual Memory and page\
                 replacement to and from the backing store by utilizing LRU and FIFO page replacement algorithm"
             },
@@ -227,7 +227,7 @@ const  Data= {
             "id3": {
                 "title": "Text search using Docker and Elastic Search",
                 "technologies": "NodeJS, Docker, Elastic search, ReactJS, Nginx",
-                "link": "https://github.com/rac1729",
+                "link": "https://github.com/rajc1729",
                 "description": "Populated Elasticsearch with 100 books (230,000 paragraphs) to prepare a search API by leveraging Nginx and NodeJS\
                 backend client along with ReactJS as frontend client"
             },
@@ -235,7 +235,7 @@ const  Data= {
             "id4": {
                 "title": "Real-Time Taxi App with Django Channels and React",
                 "technologies": "Django- Channels, Redis, PY-test, ReactJS, Nginx",
-                "link": "https://github.com/rac1729",
+                "link": "https://github.com/rajc1729",
                 "description": "Used asynchronous Django-channels to create WebSocket hooked with React-JS to visualize the current location using\
                 Google Maps. Leveraged Cypress for creating end-to-end testing"
             },

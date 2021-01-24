@@ -7,7 +7,7 @@ const Header = () => (
     <nav  className="navbar_elm">
       <div>
         <span className="nav_title">
-          <Link to="/">Raj Chhatbar</Link>
+          <Link to="/#">Raj Chhatbar</Link>
         </span>
       </div>
       <ul className="nav_right_container">
