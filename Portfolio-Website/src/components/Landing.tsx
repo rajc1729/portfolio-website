@@ -22,7 +22,7 @@ const Landing = ({pic}) => {
                     <div className="button_container">
                         <a 
                         title="resume"
-                        href={"/static/raj_resume.pdf"}
+                        href={"/static/Raj_resume.pdf"}
                         target="_blank"
                         rel="nofollow noopener noreferrer"
                         className="dark_button">
