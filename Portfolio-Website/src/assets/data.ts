@@ -241,6 +241,26 @@ const  Data= {
             },
         },
 
+        "blogs": {
+            "id1": {
+                "title": "Create a Production Ready Infinite Scrolling in React-js using Power of Debounce, Throttle...",
+                "link": "https://medium.com/@rajc1729/create-a-production-ready-infinite-scrolling-in-react-js-using-power-of-debounce-throttle-and-38afa645ef4d?source=rss-371a0654d1d0------2",
+                "pubDate": "FEBRUARY 2, 2021",
+                "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*Ki_GlXebj7sR8sfezcSq9A.png",
+                "description": "Today we all know that infinite scroll has become like a standard practice in most websites as from the user’s perspective, it is easy and friction-less, which indirectly helps companies increase...",
+                "tags": ["React-js", "Infinite-Scroll", "Hooks", "Debounce", "Throttling"]
+            },
+
+            "id2": {
+                "title": "How to Set-up AWS S3 with Django REST like a Beast",
+                "link": "https://medium.com/@rajc1729/how-to-set-up-aws-s3-with-django-rest-like-a-beast-13623be346ac?source=rss-371a0654d1d0------2",
+                "pubDate": "JANUARY 24, 2021",
+                "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*4m28InTSL_NcchkS79BLtQ.png",
+                "description": "Frequently we have come across the question of whether we should serve static files with Django or with some cloud-based storage solutions. However, when the system tends to scale, serving static...",
+                "tags": ["Django", "REST Framework", "AWS S3"]
+            },
+        },
+
     }
 
 

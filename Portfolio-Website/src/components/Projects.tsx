@@ -1,5 +1,4 @@
 import React from "react"
-import {useEffect, useState} from 'react';
 import "../styles/Projects.scss"
 import { ProjectCardLeft, ProjectCardRight } from "./card/ProjectCard";
 import Data from "../assets/data"
@@ -17,6 +16,7 @@ const Project = () => {
                     <>
                         {i% 2 == 0 ? (
                             <ProjectCardLeft
+                            key = {i}
                             title={project.title}
                             technologies_text={project.technologies}
                             code_link={project.link}
@@ -24,6 +24,7 @@ const Project = () => {
                             />
                         ) : (
                             <ProjectCardRight
+                            key = {i}
                             title={project.title}
                             technologies_text={project.technologies}
                             code_link={project.link}

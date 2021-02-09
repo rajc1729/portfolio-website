@@ -45,12 +45,9 @@
 .nav_right_container{
     display: flex;
     align-items: center;
+    padding: 0px;
+    list-style: none;
     
-    li {
-        list-style: none;
-        margin-right: 20px;
-        
-    }
     li > a {
         text-decoration: none;
         position: relative;
@@ -60,5 +57,18 @@
 
     @include media("<tablet") {
         align-self: center;
+      }
+}
+
+.nav_right_container:not(:first-child) {
+        
+    li {
+        margin-left: 20px;
+    }
+
+    @include media("<tablet") {
+        li{
+            margin-left: 12px;
+        }
       }
 }

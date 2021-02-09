@@ -7,6 +7,9 @@ const Contact = () => {
         <>
             <section id="contact">
                 <div className="contact_container">
+
+
+                    
                 <span className="contact_title">Get In Touch</span>
                 
                 <p className="contact_description">I'm currently looking for new opportunities, related to Full-stack software engineering </p>
