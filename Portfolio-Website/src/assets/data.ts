@@ -97,7 +97,14 @@ const  Data= {
                 "id8": {
                     "name": "Flask",
                 },
+                "id9": {
+                    "name": "Next-js",
+                },
+                "id10": {
+                    "name": "Jitsi-WebRTC",
+                },
                 
+
             },
 
             "Databases": {
