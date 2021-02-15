@@ -7,8 +7,9 @@ export const BlogCard = ({pic, title, link, pubDate, description, tags}) => {
     return(
         <>
         <div className ="blog_card_container">
-
+            <a href={link} target="_blank" title="medium">
             <Img fluid={pic.childImageSharp.fluid} alt="blogImage" className="thumbnail"/>
+            </a>
             
             <div className ="blog_content_container">
             <p className ="date">{pubDate}</p>

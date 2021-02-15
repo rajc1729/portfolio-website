@@ -5,7 +5,7 @@ import "../styles/Work.scss"
 const Work = () => {
 
     const [windowWidth, setWindowWidth] = useState(null)
-    const [currentExperience, setCurrentExperience] = useState<string>("csuf");
+    const [currentExperience, setCurrentExperience] = useState<string>("collabcafe");
 
     const updateWindowSize = () => {
         setWindowWidth(window.innerWidth)
@@ -28,6 +28,15 @@ const Work = () => {
                     {windowWidth < 768 &&  (<div className="work_list_flex">
                             <div>
                                 <button
+                                onClick={() => setCurrentExperience("collabcafe")}
+                                className={currentExperience==="collabcafe" ? "work_flex_name_button_highlight" : "work_flex_name_button"}
+                                >
+                                    CollabCafe
+                                </button>
+                            </div>
+
+                            <div>
+                                <button
                                 onClick={() => setCurrentExperience("csuf")}
                                 className={currentExperience==="csuf" ? "work_flex_name_button_highlight" : "work_flex_name_button"}
                                 >
@@ -45,6 +54,14 @@ const Work = () => {
                         </div>)}
 
                         {windowWidth > 768 &&  (<div className="work_list">
+                            <div>
+                                <button
+                                onClick={() => setCurrentExperience("collabcafe")}
+                                className={currentExperience==="collabcafe" ? "work_name_button_highlight" : "work_name_button"}
+                                >
+                                    CollabCafe
+                                </button>
+                            </div>
                             <div>
                                 <button
                                 onClick={() => setCurrentExperience("csuf")}
@@ -67,6 +84,25 @@ const Work = () => {
 
 
                         <div className="work_tab_container">
+
+                            { currentExperience==="collabcafe" &&(
+                            <div>
+                                <h4 className="experience_title">Full-stack software engineer Intern</h4>
+                                <h4 className="company">CollabCafe, Inc.</h4>
+                                <h5>Febuary 2021 - Present</h5>
+
+                                <ul className="experience_description">
+                                    <li>
+                                    Working on to write 35 reusable components using Next.js, Typescript, and SASS
+                                    </li>
+
+                                    <li>
+                                    Building a video chat application using Kubernetes cluster and opensource WebRTC Jits framework to serve 1000 users
+                                    </li>
+                                </ul>
+                            </div>)}
+
+
                             { currentExperience==="csuf" &&(
                             <div>
                                 <h4 className="experience_title">Graduate Research Assistant</h4>

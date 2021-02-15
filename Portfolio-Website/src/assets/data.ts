@@ -103,6 +103,18 @@ const  Data= {
                 "id10": {
                     "name": "Jitsi-WebRTC",
                 },
+                "id11": {
+                    "name": "Redux",
+                },
+                "id12": {
+                    "name": "PySpark",
+                },
+                "id13": {
+                    "name": "PyTorch",
+                },
+                "id14": {
+                    "name": "TensorFlow",
+                },
                 
 
             },
@@ -129,6 +141,9 @@ const  Data= {
                 "id1": {
                     "name": "Docker",
                 },
+                "id2": {
+                    "name": "Kubernetes",
+                },
     
                 "id3": {
                     "name": "Git & GitHub",
@@ -149,8 +164,16 @@ const  Data= {
                 "id7": {
                     "name": "GCP",
                 },
+                "id8": {
+                    "name": "Kubernetes",
+                },
+                "id9": {
+                    "name": "REST",
+                },
+                "id10": {
+                    "name": "GraphQL",
+                },
             },
-
         },
 
 
