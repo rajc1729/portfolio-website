@@ -11,7 +11,7 @@ const Blogs = ({pic}) => {
         <section id="blogs">
             <h3 className="title">Blogs</h3>
 
-            <div className="grid_container">
+            <div className="blog_grid_container">
                 <BlogCard
                 pic = {pic[1]}
                 title = {Data.blogs.id1.title}
