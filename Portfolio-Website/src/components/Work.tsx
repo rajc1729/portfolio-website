@@ -82,7 +82,6 @@ const Work = () => {
 
 
 
-
                         <div className="work_tab_container">
 
                             { currentExperience==="collabcafe" &&(
@@ -93,7 +92,11 @@ const Work = () => {
 
                                 <ul className="experience_description">
                                     <li>
-                                    Working on to write 35 reusable components using Next.js, Typescript, and SASS
+                                    Implementing 35 reusable components using Next.js, Typescript, and 30 REST APIs using Django REST Framework
+                                    </li>
+
+                                    <li>
+                                    Expedited APIs response time by utilizing asynchronous task queue using Celery for running background task
                                     </li>
 
                                     <li>
@@ -105,24 +108,43 @@ const Work = () => {
 
                             { currentExperience==="csuf" &&(
                             <div>
-                                <h4 className="experience_title">Graduate Research Assistant</h4>
-                                <h4 className="company">California state university Fullerton</h4>
-                                <h5>January 2020 - July 2020</h5>
+                                <div>
+                                    <h4 className="experience_title">Student Assistant at University Data Center</h4>
+                                    <h4 className="company">California state university Fullerton</h4>
+                                    <h5>August 2020 - Present</h5>
 
-                                <ul className="experience_description">
-                                    <li>
-                                    Conducted research to understand impacts on cancer, based on gender, ethnicity and geographic region
-                                    </li>
+                                    <ul className="experience_description">
+                                        <li>
+                                        Configured Nginx to setup reverse proxy and using telnet, grep Linux tools for testing, debugging, and troubleshooting
+                                        </li>
 
-                                    <li>
-                                    Analyzed the subset of data using statistical methods such as multi-comparisons, conducting meta-analysis with prior
-                                    studies related to mortality and morbidity for a different type of cancer
-                                    </li>
+                                        <li>
+                                        Reduced deployment time by developing bash scripts to automate build and deployment on Ubuntu servers
+                                        </li>
+                                    </ul>
+                                </div>
 
-                                    <li>
-                                    Identified importance of various features through domain expert and removed irrelevant features
-                                    </li>
-                                </ul>
+                                <div>
+                                    <h4 className="experience_title">Graduate Research Assistant</h4>
+                                    <h4 className="company">California state university Fullerton</h4>
+                                    <h5>January 2020 - July 2020</h5>
+
+                                    <ul className="experience_description">
+                                        <li>
+                                        Conducted research to understand impacts on cancer, based on gender, ethnicity and geographic region
+                                        </li>
+
+                                        <li>
+                                        Analyzed the subset of data using statistical methods such as multi-comparisons, conducting meta-analysis with prior
+                                        studies related to mortality and morbidity for a different type of cancer
+                                        </li>
+
+                                        <li>
+                                        Identified importance of various features through domain expert and removed irrelevant features
+                                        </li>
+                                    </ul>
+                                </div>
+                                
                             </div>)}
 
                             { currentExperience==="techmicra" &&(

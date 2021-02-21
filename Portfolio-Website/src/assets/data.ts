@@ -93,7 +93,7 @@ const  Data= {
                 "id7": {
                     "name": "Express-JS",
                 },
-
+                
                 "id8": {
                     "name": "Flask",
                 },
@@ -115,6 +115,9 @@ const  Data= {
                 "id14": {
                     "name": "TensorFlow",
                 },
+                "id15": {
+                    "name": "Celery",
+                },
                 
 
             },
@@ -127,12 +130,14 @@ const  Data= {
                 "id3": {
                     "name": "MongoDB",
                 },
-    
                 "id4": {
+                    "name": "DynamoDB",
+                },
+                "id5": {
                     "name": "Firebase (Cloud Firestore and Realtime)",
                 },
 
-                "id5": {
+                "id6": {
                     "name": "Redis",
                 },
             },
@@ -172,6 +177,15 @@ const  Data= {
                 },
                 "id10": {
                     "name": "GraphQL",
+                },
+                "id11": {
+                    "name": "SSH",
+                },
+                "id12": {
+                    "name": "Telnet",
+                },
+                "id13": {
+                    "name": "grep",
                 },
             },
         },
