@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Raj Chhatbar`,
-    description: `I am a software engineer based on southern california, specializing in building full-stack cloud-based solutions.`,
+    description: `I am a software engineer based in southern california, specializing in building full-stack cloud-based solutions.`,
     siteUrl: `https://rajchhatbar.com`,
     image: 'static/images/og.png',
     author: `@raj`,
