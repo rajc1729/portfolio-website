@@ -1,62 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-:root{
-    --light: #FFFFFF;
-    --dark: #091133;
-    --primary: #FF6584;
-    --accent: #fee348;
-    --nav: #FBFBFD;
-    --text: #929ECC;
-    --lightDarkText: #37447E;
-    --darkText: #111B47;
+:root {
+  --light: #ffffff;
+  --dark: #091133;
+  --primary: #ff6584;
+  --accent: #fee348;
+  --nav: #fbfbfd;
+  --text: #929ecc;
+  --lightDarkText: #37447e;
+  --darkText: #111b47;
 }
 
 body {
-    background-color: var(--light);
-    color: var(--dark);
-    margin: 0;
-    font-family: "Roboto", Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: url('../images/Path.svg') top right no-repeat;
-    // // background-position: 550px 10px;
-    // background-size: 10% 20% 50% 10%;
-    background-position: 160% 0%;
-    // // background-size: 250%;
-    // // position: absolute;
-    // @media (max-width: 705px) {
-    //   background: url('../images/Path.svg') top left no-repeat;
-    //   background-position: 15% 9%;
-    //   background-size: 250%;
-    // }
+  background-color: var(--light);
+  color: var(--dark);
+  margin: 0;
+  font-family: "Roboto", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url("../images/Path.svg") top right no-repeat;
+  // // background-position: 550px 10px;
+  // background-size: 10% 20% 50% 10%;
+  background-position: 160% 0%;
+  // // background-size: 250%;
+  // // position: absolute;
+  // @media (max-width: 705px) {
+  //   background: url('../images/Path.svg') top left no-repeat;
+  //   background-position: 15% 9%;
+  //   background-size: 250%;
+  // }
+}
 
+.accent {
+  color: var(--primary);
+}
 
-  }
-  
-  .accent {
-    color: var(--primary);
-  }
-  
-  h2 {
-    font-size: 48px;
-    font-weight: bold;
-  }
+h2 {
+  font-size: 48px;
+  font-weight: bold;
+}
 
-  h1{
-    font-size: 96px;
-    font-weight: 500;
-  }
+h1 {
+  font-size: 96px;
+  font-weight: 500;
+}
 
-  h4{
-    font-size: 30px;
-    font-weight: 500;
-  }
-  
-  h3{
-    font-size: 36px;
-    font-weight: 500;
-  }
+h4 {
+  font-size: 30px;
+  font-weight: 500;
+}
 
-  p {
-    font-size: 18px;
-  }
+h3 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 18px;
+}

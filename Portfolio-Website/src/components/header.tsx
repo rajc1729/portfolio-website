@@ -4,7 +4,7 @@ import "../styles/Header.scss"
 
 const Header = () => (
   <header id="navbar">
-    <nav  className="navbar_elm">
+    <nav className="navbar_elm">
       <div>
         <span className="nav_title">
           <Link to="/#">Raj Chhatbar</Link>
@@ -29,9 +29,7 @@ const Header = () => (
         </li>
       </ul>
     </nav>
-
   </header>
 )
-
 
 export default Header

@@ -1,74 +1,70 @@
-
-
-#navbar{
-    position: fixed;
-    z-index: 100;
-    background-color: var(--nav);
-    height: 55px;
-    top: 0px;
-    width: 100%;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.05),
+#navbar {
+  position: fixed;
+  z-index: 100;
+  background-color: var(--nav);
+  height: 55px;
+  top: 0px;
+  width: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.05),
     0 2px 8px rgba(0, 0, 0, 0.05);
-    @include media("<tablet") {
-        height: 70px;
-      }
-
+  @include media("<tablet") {
+    height: 70px;
+  }
 }
 
-.navbar_elm{
-    max-width: 100%;
-    margin: 0px 40px;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include media("<tablet") {
-        margin: 0 24px;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-      }
+.navbar_elm {
+  max-width: 100%;
+  margin: 0px 40px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include media("<tablet") {
+    margin: 0 24px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
 }
 
-.nav_title{
-    a {
-        font-weight: 900;
-        text-decoration: none;
-        font-size: 26px;
-        color: var(--lightDarkText);
-    }
-    a:visited {
+.nav_title {
+  a {
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 26px;
     color: var(--lightDarkText);
-    }
+  }
+  a:visited {
+    color: var(--lightDarkText);
+  }
 }
 
-.nav_right_container{
-    display: flex;
-    align-items: center;
-    padding: 0px;
-    list-style: none;
-    
-    li > a {
-        text-decoration: none;
-        position: relative;
-        color: var(--lightDarkText);
-        font-weight: 500;
-    }
+.nav_right_container {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  list-style: none;
 
-    @include media("<tablet") {
-        align-self: center;
-      }
+  li > a {
+    text-decoration: none;
+    position: relative;
+    color: var(--lightDarkText);
+    font-weight: 500;
+  }
+
+  @include media("<tablet") {
+    align-self: center;
+  }
 }
 
 .nav_right_container:not(:first-child) {
-        
-    li {
-        margin-left: 20px;
-    }
+  li {
+    margin-left: 20px;
+  }
 
-    @include media("<tablet") {
-        li{
-            margin-left: 12px;
-        }
-      }
+  @include media("<tablet") {
+    li {
+      margin-left: 12px;
+    }
+  }
 }

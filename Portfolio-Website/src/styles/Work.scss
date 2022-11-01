@@ -1,173 +1,171 @@
 @mixin button-reset {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    cursor: pointer;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-#experience{
+#experience {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work_container {
+  position: relative;
+  max-width: 750px;
+}
+
+.title {
+  color: var(--darkText);
+}
+
+.tab_container {
+  padding-top: 33px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  @include media("<=tablet") {
+    flex-direction: column;
+    padding-top: 13px;
+    align-items: center;
+  }
+}
+.work_list_flex {
+  display: flex;
+  z-index: 3;
+  padding: 20px 0px;
+  margin-left: 20px;
+}
+
+.work_flex_name_button {
+  @include button-reset();
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  height: 30px;
+  padding: 0 20px 2px;
+  border-bottom: 2px solid #c8c8c8;
+  text-align: center;
+  white-space: nowrap;
+  outline: none;
+  &:hover,
+  &:focus {
+    background-color: #f3f6ff !important;
+  }
+}
+
+.work_flex_name_button_highlight {
+  @include button-reset();
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #f3f6ff;
+  height: 30px;
+  padding: 0 20px 2px;
+  border-bottom: 2px solid #505f98;
+  text-align: center;
+  white-space: nowrap;
+  outline: none;
+  transition: transform 0.25s ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: #f3f6ff !important;
+  }
+}
+
+.work_list {
+  display: block;
+  z-index: 3;
+  padding: 0px;
+  margin: 0px;
+}
+
+.work_name_button {
+  @include button-reset();
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  height: 30px;
+  padding: 0 20px 2px;
+  border-right: 2px solid #c8c8c8;
+  text-align: center;
+  white-space: nowrap;
+  outline: none;
+  &:hover,
+  &:focus {
+    background-color: #f3f6ff !important;
+  }
+}
+
+.work_name_button_highlight {
+  @include button-reset();
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #f3f6ff;
+  height: 30px;
+  padding: 0 20px 2px;
+  border-right: 2px solid #505f98;
+  text-align: center;
+  white-space: nowrap;
+  outline: none;
+  transition: transform 0.25s ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: #f3f6ff !important;
+  }
+}
+
+.work_tab_container {
+  position: relative;
+  width: 90%;
+  margin-left: 20px;
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  height: auto;
+  padding: 20px;
+  @include media("<=tablet") {
+    margin-left: 0px;
+  }
+}
+
+.experience_title {
+  margin: 5px 0px;
+  font-weight: 600;
+  color: --var(--darkText);
+}
+
+.company {
+  margin: 0px;
+  font-size: 18px;
+}
+
+.experience_description {
+  color: var(--lightDarkText);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
     position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-left: 30px;
+    padding-bottom: 10px;
+  }
+
+  li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #505f98;
+  }
 }
-
-.work_container{
-    position: relative;
-    max-width: 750px;
-}
-
-.title{
-    color: var(--darkText);
-}
-
-.tab_container{
-    padding-top: 33px;
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    @include media("<=tablet") {
-        flex-direction: column;
-        padding-top: 13px;
-        align-items: center;
-     }
-}
-.work_list_flex{
-    display: flex;
-    z-index: 3;
-    padding: 20px 0px;
-    margin-left: 20px;
-}
-
-.work_flex_name_button{
-    @include button-reset();
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background-color: transparent;
-    height: 30px;
-    padding: 0 20px 2px;
-    border-bottom: 2px solid #C8C8C8;
-    text-align: center;
-    white-space: nowrap;
-    outline:none;
-    &:hover,
-    &:focus {
-        background-color: #F3F6FF !important;
-    }
-}
-
-.work_flex_name_button_highlight{
-    @include button-reset();
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background-color: #F3F6FF;
-    height: 30px;
-    padding: 0 20px 2px;
-    border-bottom: 2px solid #505F98;
-    text-align: center;
-    white-space: nowrap;
-    outline:none;
-    transition: transform 0.25s ease-in-out;
-    &:hover,
-    &:focus {
-        background-color: #F3F6FF !important;
-    }
-}
-
-.work_list{
-    display: block;
-    z-index: 3;
-    padding: 0px;
-    margin: 0px;
-}
-
-.work_name_button{
-    @include button-reset();
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background-color: transparent;
-    height: 30px;
-    padding: 0 20px 2px;
-    border-right: 2px solid #C8C8C8;
-    text-align: center;
-    white-space: nowrap;
-    outline:none;
-    &:hover,
-    &:focus {
-        background-color: #F3F6FF !important;
-    }
-}
-
-.work_name_button_highlight{
-    @include button-reset();
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background-color: #F3F6FF;
-    height: 30px;
-    padding: 0 20px 2px;
-    border-right: 2px solid #505F98;
-    text-align: center;
-    white-space: nowrap;
-    outline:none;
-    transition: transform 0.25s ease-in-out;
-    &:hover,
-    &:focus {
-        background-color: #F3F6FF !important;
-    }
-}
-
-.work_tab_container{
-    position: relative;
-    width: 90%;
-    margin-left: 20px;
-    background: #FFFFFF;
-    border: 1px solid #F2F2F2;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
-    height: auto;
-    padding: 20px;
-    @include media("<=tablet") {
-        margin-left: 0px;
-    }
-}
-
-
-.experience_title{
-    margin: 5px 0px;
-    font-weight: 600;
-    color: --var(--darkText);
-}
-
-.company{
-    margin: 0px;
-    font-size: 18px;
-}
-
-.experience_description{
-    color: var(--lightDarkText);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li{
-        position: relative;
-        padding-left: 30px;
-        padding-bottom: 10px;
-    }
-
-    li:before {
-        content: '▸';
-        position: absolute;
-        left: 0;
-        color: #505F98;
-    }
-}
-

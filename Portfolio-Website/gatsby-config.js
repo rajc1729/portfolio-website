@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Raj Chhatbar`,
-    description: `I am a software engineer based in southern california, specializing in building full-stack cloud-based solutions.`,
+    description: `I am a software development engineer at Amazon.com, specializing in building full-stack cloud-based solutions.`,
     siteUrl: `https://rajchhatbar.com`,
     image: 'static/images/og.png',
     author: `@raj`,
@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sass",
       options: {
-        data: `@import "${__dirname}/src/styles/global";
+        additionalData: `@import "${__dirname}/src/styles/global";
                 @import "${__dirname}/src/styles/_include-media";`,
       },
     },

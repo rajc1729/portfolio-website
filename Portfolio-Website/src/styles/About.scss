@@ -1,197 +1,193 @@
-#about{
-    position: relative;
-    width: 100%;
-    // background-color: lemonchiffon;
-    height: auto;
+#about {
+  position: relative;
+  width: 100%;
+  // background-color: lemonchiffon;
+  height: auto;
 }
 
-.title{
-    color: var(--darkText);
+.title {
+  color: var(--darkText);
 }
 
-.first_card{
-    display: inline-block;
-    background: #FFFFFF;
-    border: 1px solid #F2F2F2;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
-    padding: 10px;
-    max-width: 450px;
+.first_card {
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 10px;
+  max-width: 450px;
 }
 
-.card_title_container{
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.card_title_container {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-
-.technologies_container{
-    margin-top: 25px;
+.technologies_container {
+  margin-top: 25px;
 }
 
 .technologies_container > span {
-    font-size: 16px;
+  font-size: 16px;
 }
 
-
-.description{
-    color: var(--lightDarkText);
-    font-size: 16px;
-    line-height: 26px;
-    overflow: auto;
+.description {
+  color: var(--lightDarkText);
+  font-size: 16px;
+  line-height: 26px;
+  overflow: auto;
 }
 
-.second_card{
-    background: #FFFFFF;
-    box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
-    border-radius: 4px;
-    padding: 10px;
+.second_card {
+  background: #ffffff;
+  box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+  border-radius: 4px;
+  padding: 10px;
 }
 
-.language_container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
+.language_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.language{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.language {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  min-width: 250px;
+}
+
+.language_name {
+  font-size: 16px;
+}
+
+.language_confidence_level {
+  font-size: 14px;
+  color: #5d6970;
+  margin: 1px;
+}
+
+.technologies_text {
+  display: inline-block;
+  margin: 6px 6px 6px 0;
+  padding: 4px 6px;
+  border-radius: 3px;
+  color: #505f98;
+  border: 1px solid #505f98;
+  font-weight: 500;
+}
+
+.university_name {
+  font-size: 16px;
+}
+
+.university_img {
+  width: 52px;
+  height: 52px;
+}
+
+.university_box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+  min-width: 285px;
+  padding: 5px;
+}
+
+.university_container {
+  padding: 15px 5px;
+  @include media("<=tablet") {
+    padding: 15px 0px;
+  }
+}
+
+.university_card {
+  margin-left: 5px;
+}
+
+.intrest_container {
+  margin-top: 20px;
+
+  ul {
+    margin: 0px;
     padding: 5px;
-    min-width: 250px;
-}
-
-.language_name{
+    text-decoration: dashed;
     font-size: 16px;
-}
+    li {
+      margin-left: 25px;
 
-.language_confidence_level{
-    font-size: 14px;
-    color: #5D6970;
-    margin: 1px;
-}
-
-
-.technologies_text{
-    display: inline-block;
-    margin: 6px 6px 6px 0;
-    padding: 4px 6px;
-    border-radius: 3px;
-    color: #505F98;
-    border: 1px solid #505F98;
-    font-weight: 500;
-}
-
-.university_name{
-    font-size: 16px;
-}
-
-.university_img{
-    width: 52px;
-    height: 52px;
-}
-
-.university_box{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: auto;
-    min-width: 285px;
-    padding: 5px;
-}
-
-.university_container{
-    padding: 15px 5px;
-    @include media("<=tablet") {
-       padding: 15px 0px;
+      color: var(--lightDarkText);
+      font-size: 14px;
+      line-height: 26px;
     }
+  }
 }
 
-.university_card{
-    margin-left: 5px;
-}
-
-.intrest_container{
-    margin-top: 20px;
-
-    ul{
-        margin: 0px;
-        padding: 5px;
-        text-decoration: dashed;
-        font-size: 16px;
-        li{
-            margin-left: 25px;
-
-            color: var(--lightDarkText);
-            font-size: 14px;
-            line-height: 26px;
-        }
-    }
-}
-
-.grid_container{
-    width: 100%;
-    height: auto;
-    padding: 5px;
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    grid-template-rows: auto;
-    grid-template-areas:
+.grid_container {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas:
     "introduction languages technologies"
     "education intrest technologies";
-    gap: 25px 25px;
+  gap: 25px 25px;
 
-    @include media(">tablet", "<=desktop") {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-          "introduction technologies"
-          "languages technologies"
-          "education intrest";
-      }
-      @include media(">phone", "<=tablet") {
-        padding: 2px;
-        margin-bottom: 5px;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "introduction"
-          "education"
-          "languages"
-          "technologies"
-          "intrest";
-      }
-      @include media("<=phone") {
-        padding: 0px;
-        margin: 15px 0px;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "introduction"
-        "education"
-        "languages"
-        "technologies"
-        "intrest";
-      }
+  @include media(">tablet", "<=desktop") {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "introduction technologies"
+      "languages technologies"
+      "education intrest";
+  }
+  @include media(">phone", "<=tablet") {
+    padding: 2px;
+    margin-bottom: 5px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "introduction"
+      "education"
+      "languages"
+      "technologies"
+      "intrest";
+  }
+  @include media("<=phone") {
+    padding: 0px;
+    margin: 15px 0px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "introduction"
+      "education"
+      "languages"
+      "technologies"
+      "intrest";
+  }
 }
 
 #introduction {
-    grid-area: introduction;
+  grid-area: introduction;
 }
-  
+
 #languages {
-    grid-area: languages;
+  grid-area: languages;
 }
-  
+
 #technologies {
-    grid-area: technologies;
+  grid-area: technologies;
 }
-  
+
 #education {
-    grid-area: education;
+  grid-area: education;
 }
 
 #intrest {
-    grid-area: intrest;
+  grid-area: intrest;
 }

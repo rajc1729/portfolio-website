@@ -1,10 +1,10 @@
 .main_container {
-    margin: 0 auto;
-    max-width: 1245px;
-    padding: 0 50px 1.45rem;
-    overflow-x: hidden;
+  margin: 0 auto;
+  max-width: 1245px;
+  padding: 0 50px 1.45rem;
+  overflow-x: hidden;
 
-    @include media("<tablet") {
-      padding: 0 24px 1.45rem;
-    }
+  @include media("<tablet") {
+    padding: 0 24px 1.45rem;
   }
+}
