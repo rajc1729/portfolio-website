@@ -1,6 +1,5 @@
 import React from "react"
 import "../styles/Landing.scss"
-import raj from "../images/Raj_Chhatbar.png"
 import Data from "../assets/data"
 
 import Img from "gatsby-image"
