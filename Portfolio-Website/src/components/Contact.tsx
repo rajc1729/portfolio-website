@@ -10,8 +10,7 @@ const Contact = () => {
           <span className="contact_title">Get In Touch</span>
 
           <p className="contact_description">
-            I'm currently looking for new opportunities, related to Full-stack
-            software engineering{" "}
+            I'm not looking for any new opportunities
           </p>
 
           <a
