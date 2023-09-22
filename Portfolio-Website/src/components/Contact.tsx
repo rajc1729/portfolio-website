@@ -10,7 +10,7 @@ const Contact = () => {
           <span className="contact_title">Get In Touch</span>
 
           <p className="contact_description">
-            Although I’m not currently looking for any new opportunities, my
+            Actively looking for new opportunities, my
             inbox is always open. Whether you have a question or just want to
             say hi, I’ll try my best to get back to you!
           </p>
