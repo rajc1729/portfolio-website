@@ -141,12 +141,64 @@ const Work = () => {
 
                   <ul className="experience_description">
                     <li>
-                      Working on financial offer ranking to provide best offers
-                      to customers worldwide.
+                      Successfully developed and integrated services with 
+                      third-party sellers, making financial offers eligible for 
+                      third-party products and leading to a remarkable 30% increase 
+                      in business Gross Merchandise Sales (GMS).
                     </li>
 
                     <li>
-                      Working on Prime card bonus expansion.
+                      Led a successful migration of the Service Provider Interface 
+                      (SPI) to ensure consistent data sharing across services, 
+                      resulting in a remarkable improvement of overall system cohesion by 50%.
+                    </li>
+
+                    <li>
+                      Enhanced integrations with other services by evaluating and 
+                      collFeMaboratively addressing each edge case with upstream clients, 
+                      ensuring the provision of accurate financial offers to customers during 
+                      single-page checkout. This initiative resulted in a substantial 25% 
+                      reduction in the manual reconciliation process.
+                    </li>
+
+                     <li>
+                      Collaborated on the resolution of failing integration tests and contributed 
+                       to the optimization of the CICD pipeline for seamless automatic code deployment, 
+                       resulting in a significant 25% reduction in manual deployment time, equivalent 
+                       to saving 8 SDE hours weekly.
+                    </li>
+
+                    <li>
+                      Built and fixed the data pipeline in close collaboration with data engineers to 
+                      generate financial offer usage reporting, resulting in a substantial 15% increase 
+                      in the business's ability to identify customer trends for different products.
+                    </li>
+
+                    <li>
+                      Led initiatives to enhance Tier-1 development environment availability, resulting in an 
+                      impressive 80% increase in uptime and accessibility by identifying and resolving 
+                      'maxConnectionPerHost' issues. 
+                    </li>
+
+                    <li>
+                    Developed and enhanced the reliability of internal dashboards by systematically addressing front-end 
+                    issues related to forms, implementing robust API exception handling, and mitigating race conditions 
+                    to ensure seamless performance.  
+                    <li/>
+
+                    <li>
+                      Implemented scripts for data backfilling and addressing ad-hoc data requests, 
+                      resulting in streamlined operations and a significant reduction in the 
+                      number of services required, achieving an efficiency improvement of approximately 20%.
+                    </li>
+
+                     <li>
+                      Implemented and integrated shadow mode testing to mitigate the risk of 
+                      customer-impacting issues, ensuring a smoother and more reliable user experience. 
+                    </li>
+
+                    <li>
+                      Enhanced internal search integration, achieving a 20% improvement in performance of widgets
                       <br />
                       <a href="https://www.amazon.com/pcb" className="link">
                         https://www.amazon.com/pcb
