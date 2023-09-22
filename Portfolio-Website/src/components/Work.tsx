@@ -184,7 +184,7 @@ const Work = () => {
                     Developed and enhanced the reliability of internal dashboards by systematically addressing front-end 
                     issues related to forms, implementing robust API exception handling, and mitigating race conditions 
                     to ensure seamless performance.  
-                    <li/>
+                    </li>
 
                     <li>
                       Implemented scripts for data backfilling and addressing ad-hoc data requests, 
