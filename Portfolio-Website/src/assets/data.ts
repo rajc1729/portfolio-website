@@ -34,12 +34,12 @@ const Data = {
 
   language: {
     id1: {
-      name: "Python(sync and async)",
+      name: "JAVA",
       rating: 90,
     },
 
     id2: {
-      name: "JAVA",
+      name: "Python(sync and async)",
       rating: 90,
     },
 
@@ -72,11 +72,19 @@ const Data = {
   technologies: {
     Frameworks: {
       id1: {
-        name: "Django",
+        name: "Spring/Guice",
+      },
+
+      id2: {
+        name: "JUnit",
+      },
+
+      id2a: {
+        name: "Kibana",
       },
 
       id3: {
-        name: "Django-REST",
+        name: "Django",
       },
 
       id4: {
@@ -165,7 +173,7 @@ const Data = {
       },
 
       id6: {
-        name: "AWS (EC2, S3, Lambda)",
+        name: "AWS (EC2, S3, Lambda, Kinesis, Step Functions, Cloudwatch)",
       },
 
       id7: {
