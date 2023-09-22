@@ -262,7 +262,15 @@ const Data = {
       startDate: "August 2021",
       endDate: "Ongoing",
       description: [
-        "Working on financial offer ranking and Prime card bonus to provide best offer to customers",
+        "Successfully developed and integrated services with third-party sellers, making financial offers eligible for third-party products and leading to a remarkable 30% increase in business Gross Merchandise Sales (GMS)",
+        "Led a successful migration of the Service Provider Interface (SPI) to ensure consistent data sharing across services, resulting in a remarkable improvement of overall system cohesion by 50%",
+        "Enhanced integrations with other services by evaluating and collFeMaboratively addressing each edge case with upstream clients, ensuring the provision of accurate financial offers to customers during single-page checkout. This initiative resulted in a substantial 25% reduction in the manual reconciliation process",
+        "Collaborated on the resolution of failing integration tests and contributed to the optimization of the CICD pipeline for seamless automatic code deployment, resulting in a significant 25% reduction in manual deployment time, equivalent to saving 8 SDE hours weekly",
+        "Built and fixed the data pipeline in close collaboration with data engineers to generate financial offer usage reporting, resulting in a substantial 15% increase in the business's ability to identify customer trends for different products",
+        "Enhanced internal search integration, achieving a 20% improvement in performance of widgets (amazon.com/pcb)",
+        "Led initiatives to enhance Tier-1 development environment availability, resulting in an impressive 80% increase in uptime and accessibility by identifying and resolving 'maxConnectionPerHost' issues",
+        "Developed and enhanced the reliability of internal dashboards by systematically addressing front-end issues related to forms, implementing robust API exception handling, and mitigating race conditions to ensure seamless performance",
+        "Offered mentorship and guidance to one intern and a junior engineer, actively contributing to their professional development while positively impacting the team's growth"
       ],
     },
   },
